@@ -8,6 +8,7 @@ import logoYDKDjango from '@/images/logos/ydkdjango.svg'
 import logoCCC from '@/images/logos/contentcreatorcontrol.svg'
 import logoYDKJS from '@/images/logos/ydkJS.svg'
 import logoAuthN0de from '@/images/logos/authn0de.svg'
+import logoGuestbook from '@/images/logos/guestbook.svg'
 
 
 
@@ -16,37 +17,43 @@ const projects = [
     name: 'DjAuth0',
     description:
       'Django based authentication system Oauth2/OIDC compliant.',
-    link: { href: 'https://djauth0.richkevan.com', label: 'djauth0.richkevan.com' },
+    link: { href: 'https://github.com/richkevan/djauth0', label: 'github.com' },
     logo: logoDjauth0,
   },
   {
     name: 'You Don\'t Know Django',
     description:
       'Backend services for a community sourced trivia game.',
-    link: { href: '#', label: 'github.com' },
+    link: { href: 'https://github.com/richkevan/you-dont-know-django', label: 'github.com' },
     logo: logoYDKDjango,
   },
   {
     name: 'Content Creator Control',
     description:
-      'All in one content management and social media scheduler for Aspiring Streamers and Content Creators.',
-    link: { href: '#', label: 'github.com' },
+      'All in one content management and social media management for streamers and content creators.',
+    link: { href: 'https://github.com/richkevan/content-creator-control', label: 'github.com' },
     logo: logoCCC,
   },
   {
     name: 'You Don\'t know JS',
     description:
       'Frontend website for managing and organizing your trivia games.',
-    link: { href: '#', label: 'github.com' },
+    link: { href: 'https://github.com/richkevan/you-dont-know-js', label: 'github.com' },
     logo: logoYDKJS,
   },
   {
     name: 'AuthN0de',
     description:
       'Open source authentication and authorization server Oauth2/OIDC compliant.',
-    link: { href: '#', label: 'github.com' },
+    link: { href: 'https://github.com/richkevan/authn0de', label: 'github.com' },
     logo: logoAuthN0de,
   },
+  {
+    name: 'guestbook',
+    description: 'A beginners tutorial on making first time contributions to an open source project or git repository.',
+    link: { href: 'https://github.com/richkevan/guestbook', label: 'github.com' },
+    logo: logoGuestbook,
+  }
 ]
 
 function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
