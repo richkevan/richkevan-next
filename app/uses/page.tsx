@@ -42,79 +42,39 @@ export const metadata = {
 export default function Uses() {
   return (
     <SimpleLayout
-      title="Software I use, gadgets I love, and other things I recommend."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      title="What is sitting on my desk? 💻 What makes me productive? 💡"
+      intro="I am constantly changing and rearranging my setup. I will do my best to keep this list up to date as things change."
     >
       <div className="space-y-20">
         <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            I was using an Intel-based 16” MacBook Pro prior to this and the
-            difference is night and day. I’ve never heard the fans turn on a
-            single time, even under the incredibly heavy loads I put it through
-            with our various launch simulations.
+          <Tool title="14” MacBook Pro, M1 Pro, 16GB RAM (2021)">
+            Previously I was using an M1 Mac Mini with 8GB RAM. It handled everything like a champ but I needed something more modular for travel. I still keep the mini around and frequently use it as a lab machine for testing. In the next year or so I hope to replace it with a 16” M4 Max.
           </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
+          <Tool title=" 2 MSI 27” WQHD IPS Nvidia G-Sync Gaming Monitors">
+          170Hz refresh rate, One in a horizontal orientation and the other in a vertical orientation. These monitors serve as my primary screens for work and play. They also tend to come with me when I travel because everyone knows one screen is not enough.
           </Tool>
-          <Tool title="IBM Model M SSK Industrial Keyboard">
-            They don’t make keyboards the way they used to. I buy these any time
-            I see them go up for sale and keep them in storage in case I need
-            parts or need to retire my main.
+          <Tool title="SteelSeries APEX Pro TKL(2023) | SteelSeries APEX Pro Mini">
+            I prefer the TKL form factor for the ease of navigation with arrow keys. But on occastion the 60% comes out of hiding. I like the SteelSeries for versatility of connection options Bluetooth/Wired/Wireless. They also are a close second to the Wooting for speed and adjustibility. That being said now that a TKL Wooting is available my SteelSeries might be collecting dust soon.
           </Tool>
-          <Tool title="Apple Magic Trackpad">
-            Something about all the gestures makes me feel like a wizard with
-            special powers. I really like feeling like a wizard with special
-            powers.
+          <Tool title="SteelSeries Aerox 9 | SteelSeries Aerox 5">
+            I selected these mice because of how comfortable they felt in my hand. As someone who has a big hand with long fingers these were some of the only mice that fit my hands. They are starting to show their age though and I am starting to explore the market to find a mouse with a 4000Hz-8000Hz polling rate as they become more widely available.
           </Tool>
-          <Tool title="Herman Miller Aeron Chair">
-            If I’m going to slouch in the worst ergonomic position imaginable
-            all day, I might as well do it in an expensive chair.
+          <Tool title="Generic Office Chair">
+            I have had this thing for ever and it works for the most part.Though I do have my gripes, like comfort. I had briefly tried to upgrade to a Staples Emerge Vortex gaming chair but the quality was terrible and it broke several times, forcing me to return to the standard office chair.
           </Tool>
         </ToolsSection>
         <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            I don’t care if it’s missing all of the fancy IDE features everyone
-            else relies on, Sublime Text is still the best text editor ever
-            made.
+          <Tool title="VS Code">
+            It's widely used throughout the industry and supports multiple languages making it a great tool for learning and developing full stack apps.
           </Tool>
-          <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
+          <Tool title="Project IDX">
+            A coding enviroment in open beta from Google. Built on the same open source code as VS Code with integrated support for Gemini and Google Cloud.
           </Tool>
-          <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
-            building about a thousand admin interfaces for my various projects
-            over the years.
+          <Tool title="Warp">
+            A terminal for MacOS written in Rust with AI, The regular terminal probably works just as good but this makes me feel cool.
           </Tool>
-        </ToolsSection>
-        <ToolsSection title="Design">
-          <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
-            virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
-          </Tool>
-        </ToolsSection>
-        <ToolsSection title="Productivity">
-          <Tool title="Alfred">
-            It’s not the newest kid on the block but it’s still the fastest. The
-            Sublime Text of the application launcher world.
-          </Tool>
-          <Tool title="Reflect">
-            Using a daily notes system instead of trying to keep things
-            organized by topics has been super powerful for me. And with
-            Reflect, it’s still easy for me to keep all of that stuff
-            discoverable by topic even though all of my writing happens in the
-            daily note.
-          </Tool>
-          <Tool title="SavvyCal">
-            Great tool for scheduling meetings while protecting my calendar and
-            making sure I still have lots of time for deep work during the week.
-          </Tool>
-          <Tool title="Focus">
-            Simple tool for blocking distracting websites when I need to just do
-            the work and get some momentum going.
+          <Tool title="Beekeeper Studio">
+            My favorite DB tool is DataGrip from Jetbrains but Beekeeper is free, works well, and looks pretty, so for now its the DB tool of choice.
           </Tool>
         </ToolsSection>
       </div>

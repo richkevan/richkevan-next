@@ -3,47 +3,49 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoDjauth0 from '@/images/logos/djauth0.svg'
+import logoYDKDjango from '@/images/logos/ydkdjango.svg'
+import logoCCC from '@/images/logos/contentcreatorcontrol.svg'
+import logoYDKJS from '@/images/logos/ydkJS.svg'
+import logoAuthN0de from '@/images/logos/authn0de.svg'
+
+
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'DjAuth0',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Django based authentication system Oauth2/OIDC compliant.',
+    link: { href: 'https://djauth0.richkevan.com', label: 'djauth0.richkevan.com' },
+    logo: logoDjauth0,
   },
   {
-    name: 'Animaginary',
+    name: 'You Don\'t Know Django',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
+      'Backend services for a community sourced trivia game.',
     link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+    logo: logoYDKDjango,
   },
   {
-    name: 'HelioStream',
+    name: 'Content Creator Control',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
+      'All in one content management and social media scheduler for Aspiring Streamers and Content Creators.',
     link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+    logo: logoCCC,
   },
   {
-    name: 'cosmOS',
+    name: 'You Don\'t know JS',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
+      'Frontend website for managing and organizing your trivia games.',
     link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
+    logo: logoYDKJS,
   },
   {
-    name: 'OpenShuttle',
+    name: 'AuthN0de',
     description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
+      'Open source authentication and authorization server Oauth2/OIDC compliant.',
     link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+    logo: logoAuthN0de,
   },
 ]
 
@@ -60,14 +62,14 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description: 'Some of my most ambitious projects to date.',
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Where Dreams Meet Code: My Most Ambitious Projects to Date!"
+      intro="I'm a bit of a project hoarder, with a collection of coding experiments and half-finished creations hidden away in digital drawers. But amidst the dust, there are some real gems! Here are a few of the projects I'm most proud of (or at least, the ones I've made the most progress on). If you're curious to see more, check out my GitHub."
     >
       <ul
         role="list"
@@ -79,7 +81,7 @@ export default function Projects() {
               <Image
                 src={project.logo}
                 alt=""
-                className="h-8 w-8"
+                className="h-12 w-12"
                 unoptimized
               />
             </div>

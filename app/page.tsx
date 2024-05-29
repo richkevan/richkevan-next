@@ -11,10 +11,10 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+
+import logoCodePlatoon from '@/images/logos/codeplatoon.svg'
+import logoInstantTeams from '@/images/logos/instantteams.svg'
+import logoBayside from '@/images/logos/bayside.svg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -22,6 +22,7 @@ import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import { subscribe } from '@/app/actions'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -111,9 +112,15 @@ function SocialLink({
 }
 
 function Newsletter() {
+  async function newsletterSubscription(formData: FormData) {
+    'use server'
+
+    const email = formData.get('email')
+    console.log(email)
+  }
   return (
     <form
-      action="/thank-you"
+      action={subscribe}
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -126,6 +133,7 @@ function Newsletter() {
       <div className="mt-6 flex">
         <input
           type="email"
+          name='email'
           placeholder="Email address"
           aria-label="Email address"
           required
@@ -187,35 +195,35 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
-      logo: logoPlanetaria,
-      start: '2019',
+      company: 'Code Platoon',
+      title: 'Teaching Assitant',
+      logo: logoCodePlatoon,
+      start: '2024',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      company: 'Instant Teams',
+      title: 'Full Stack Engineer',
+      logo: logoInstantTeams,
+      start: '2024',
+      end: '2022',
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
-      logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      company: 'Bayside',
+      title: 'Application Engineer',
+      logo: logoBayside,
+      start: '2021',
+      end: '2021',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
-      logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      company: 'Bayside',
+      title: 'Frontend Developer',
+      logo: logoBayside,
+      start: '2017',
+      end: '2021',
     },
   ]
 
@@ -273,28 +281,25 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
+            Dreamer, Designer, Developer
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+          I'm Rich, a software engineer passionate about building innovative solutions and a dedicated coding educator committed to empowering the next generation of developers. Based in the San Francisco Bay Area, I thrive on the intersection of these two worlds, leveraging my technical expertise to solve real-world problems and sharing my knowledge to guide aspiring programmers on their coding journeys.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
+            <SocialLink href="https://x.com/intent/follow?screen_name=richkevan" aria-label="Follow on X" icon={XIcon} />
             <SocialLink
-              href="#"
+              href="https://www.instagram.com/rich.kevan/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="#"
+              href="https://github.com/richkevan"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="#"
+              href="https://www.linkedin.com/in/rich-kevan/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
