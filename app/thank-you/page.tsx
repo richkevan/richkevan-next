@@ -7,8 +7,7 @@ export const metadata: Metadata = {
   description: 'Thanks for subscribing to my newsletter.',
 }
 
-export default function ThankYou(request: Request) {
-  console.log('request', request)
+export default function ThankYou() {
 
   return (
     <SimpleLayout

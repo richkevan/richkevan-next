@@ -1,0 +1,902 @@
+[debug] [2024-05-29T07:19:34.053Z] ----------------------------------------------------------------------
+[debug] [2024-05-29T07:19:34.056Z] Command:       /nix/store/qfm6zpnicb4q5x6w6y4cpj5z8ap68j3h-nodejs-18.19.1/bin/node /nix/store/cgci1g1m5rzdxbwnl9lgzfyfc2lkynd4-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/bin/firebase.js hosting:channel:deploy testing
+[debug] [2024-05-29T07:19:34.058Z] CLI Version:   13.9.0
+[debug] [2024-05-29T07:19:34.058Z] Platform:      linux
+[debug] [2024-05-29T07:19:34.058Z] Node Version:  v18.19.1
+[debug] [2024-05-29T07:19:34.059Z] Time:          Wed May 29 2024 07:19:34 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-05-29T07:19:34.059Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-29T07:19:34.174Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-29T07:19:34.174Z] > authorizing via signed-in user (richskevan@gmail.com)
+[debug] [2024-05-29T07:19:34.175Z] [iam] checking project rich-kevan for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-29T07:19:34.177Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions [none]
+[debug] [2024-05-29T07:19:34.178Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:19:34.178Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-29T07:19:34.306Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions 200
+[debug] [2024-05-29T07:19:34.308Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-29T07:19:34.310Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan [none]
+[debug] [2024-05-29T07:19:34.526Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan 200
+[debug] [2024-05-29T07:19:34.527Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan {"projectId":"rich-kevan","projectNumber":"309886706198","displayName":"rich-kevan","name":"projects/rich-kevan","resources":{"hostingSite":"rich-kevan","storageBucket":"rich-kevan.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_5211c6fd-d395-45b3-ac16-84890b5cc36e"}
+[debug] [2024-05-29T07:19:34.530Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:19:34.836Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 404
+[debug] [2024-05-29T07:19:34.836Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}}
+[debug] [2024-05-29T07:19:34.846Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels?channelId=testing [none]
+[debug] [2024-05-29T07:19:34.847Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels?channelId=testing {"ttl":"604800s"}
+[debug] [2024-05-29T07:19:35.208Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels?channelId=testing 200
+[debug] [2024-05-29T07:19:35.209Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels?channelId=testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:19:35.158632463Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:19:35.158632463Z"}
+[debug] [2024-05-29T07:19:35.209Z] [hosting] created new channnel for site rich-kevan {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:19:35.158632463Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:19:35.158632463Z"}
+[info] ✔  hosting:channel: Channel testing has been created on site rich-kevan. 
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-29T07:19:46.554Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:19:46.876Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:19:46.887Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:19:35.158632463Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:19:35.158632463Z"}
+[info]   ▲ Next.js 14.3.0-canary.9
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info] Failed to compile.
+
+
+[info] app/thank-you/page.tsx
+You cannot have two parallel pages that resolve to the same path. Please check /thank-you/page and /thank-you/route. Refer to the route group docs for more information: https://nextjs.org/docs/app/building-your-application/routing/route-groups
+
+[info] 
+
+[info] 
+
+[info] > Build failed because of webpack errors
+
+[debug] [2024-05-29T07:20:15.218Z] Error: ENOENT: no such file or directory, open '/home/user/richkevan-next/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-05-29T07:21:19.770Z] ----------------------------------------------------------------------
+[debug] [2024-05-29T07:21:19.774Z] Command:       /nix/store/qfm6zpnicb4q5x6w6y4cpj5z8ap68j3h-nodejs-18.19.1/bin/node /nix/store/cgci1g1m5rzdxbwnl9lgzfyfc2lkynd4-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/bin/firebase.js hosting:channel:deploy testing
+[debug] [2024-05-29T07:21:19.774Z] CLI Version:   13.9.0
+[debug] [2024-05-29T07:21:19.775Z] Platform:      linux
+[debug] [2024-05-29T07:21:19.775Z] Node Version:  v18.19.1
+[debug] [2024-05-29T07:21:19.775Z] Time:          Wed May 29 2024 07:21:19 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-05-29T07:21:19.776Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-29T07:21:19.906Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-29T07:21:19.907Z] > authorizing via signed-in user (richskevan@gmail.com)
+[debug] [2024-05-29T07:21:19.907Z] [iam] checking project rich-kevan for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-29T07:21:19.910Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions [none]
+[debug] [2024-05-29T07:21:19.911Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:21:19.911Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-29T07:21:20.056Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions 200
+[debug] [2024-05-29T07:21:20.057Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-29T07:21:20.058Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan [none]
+[debug] [2024-05-29T07:21:20.186Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan 200
+[debug] [2024-05-29T07:21:20.187Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan {"projectId":"rich-kevan","projectNumber":"309886706198","displayName":"rich-kevan","name":"projects/rich-kevan","resources":{"hostingSite":"rich-kevan","storageBucket":"rich-kevan.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_5211c6fd-d395-45b3-ac16-84890b5cc36e"}
+[debug] [2024-05-29T07:21:20.191Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:21:20.488Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:21:20.488Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:19:35.158632463Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:19:35.158632463Z"}
+[debug] [2024-05-29T07:21:20.489Z] [hosting] found existing channel for site rich-kevan {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:19:35.158632463Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:19:35.158632463Z"}
+[debug] [2024-05-29T07:21:20.490Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing updateMask=ttl
+[debug] [2024-05-29T07:21:20.491Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"ttl":"604800s"}
+[debug] [2024-05-29T07:21:20.831Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:21:20.832Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:21:20.776228567Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:21:20.776228567Z"}
+[debug] [2024-05-29T07:21:20.833Z] [hosting] updated TTL for existing channel for site rich-kevan {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:21:20.776228567Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:21:20.776228567Z"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-29T07:21:32.627Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:21:32.939Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:21:32.940Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:21:20.776228567Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:21:20.776228567Z"}
+[info]   ▲ Next.js 14.3.0-canary.9
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+app/thank-you/page.tsx
+Type error: Page "app/thank-you/page.tsx" has an invalid "default" export:
+  Type "Request" is not valid.
+
+
+[debug] [2024-05-29T07:22:10.835Z] Error: ENOENT: no such file or directory, open '/home/user/richkevan-next/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-05-29T07:23:07.752Z] ----------------------------------------------------------------------
+[debug] [2024-05-29T07:23:07.755Z] Command:       /nix/store/qfm6zpnicb4q5x6w6y4cpj5z8ap68j3h-nodejs-18.19.1/bin/node /nix/store/cgci1g1m5rzdxbwnl9lgzfyfc2lkynd4-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/bin/firebase.js hosting:channel:deploy testing
+[debug] [2024-05-29T07:23:07.756Z] CLI Version:   13.9.0
+[debug] [2024-05-29T07:23:07.756Z] Platform:      linux
+[debug] [2024-05-29T07:23:07.757Z] Node Version:  v18.19.1
+[debug] [2024-05-29T07:23:07.757Z] Time:          Wed May 29 2024 07:23:07 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-05-29T07:23:07.757Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-29T07:23:07.867Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-29T07:23:07.868Z] > authorizing via signed-in user (richskevan@gmail.com)
+[debug] [2024-05-29T07:23:07.868Z] [iam] checking project rich-kevan for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-29T07:23:07.871Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions [none]
+[debug] [2024-05-29T07:23:07.871Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:23:07.871Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-29T07:23:08.024Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions 200
+[debug] [2024-05-29T07:23:08.024Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-29T07:23:08.032Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan [none]
+[debug] [2024-05-29T07:23:08.172Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan 200
+[debug] [2024-05-29T07:23:08.173Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan {"projectId":"rich-kevan","projectNumber":"309886706198","displayName":"rich-kevan","name":"projects/rich-kevan","resources":{"hostingSite":"rich-kevan","storageBucket":"rich-kevan.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_5211c6fd-d395-45b3-ac16-84890b5cc36e"}
+[debug] [2024-05-29T07:23:08.176Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:23:08.477Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:23:08.477Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:21:20.776228567Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:21:20.776228567Z"}
+[debug] [2024-05-29T07:23:08.484Z] [hosting] found existing channel for site rich-kevan {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:21:20.776228567Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:21:20.776228567Z"}
+[debug] [2024-05-29T07:23:08.486Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing updateMask=ttl
+[debug] [2024-05-29T07:23:08.486Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"ttl":"604800s"}
+[debug] [2024-05-29T07:23:08.832Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:23:08.832Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:23:08.779403593Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:23:08.779403593Z"}
+[debug] [2024-05-29T07:23:08.833Z] [hosting] updated TTL for existing channel for site rich-kevan {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:23:08.779403593Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:23:08.779403593Z"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-29T07:23:21.224Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:23:21.528Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:23:21.528Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:23:08.779403593Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:23:08.779403593Z"}
+[info]   ▲ Next.js 14.3.0-canary.9
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+
+[info]    Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/13) ...
+
+[info] 
+Error occurred prerendering page "/feed.xml". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: Missing NEXT_PUBLIC_SITE_URL environment variable
+    at an (/home/user/richkevan-next/.next/server/app/feed.xml/route.js:5:175832)
+    at /home/user/richkevan-next/node_modules/next/dist/compiled/next-server/app-route.runtime.prod.js:6:34780
+    at /home/user/richkevan-next/node_modules/next/dist/server/lib/trace/tracer.js:140:36
+    at NoopContextManager.with (/home/user/richkevan-next/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/user/richkevan-next/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+    at NoopTracer.startActiveSpan (/home/user/richkevan-next/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18093)
+    at ProxyTracer.startActiveSpan (/home/user/richkevan-next/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:18854)
+    at /home/user/richkevan-next/node_modules/next/dist/server/lib/trace/tracer.js:122:103
+    at NoopContextManager.with (/home/user/richkevan-next/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:7062)
+    at ContextAPI.with (/home/user/richkevan-next/node_modules/next/dist/compiled/@opentelemetry/api/index.js:1:518)
+
+[info]    Generating static pages (3/13) 
+
+[info]    Generating static pages (6/13) 
+
+[info]    Generating static pages (9/13) 
+
+[info]  ✓ Generating static pages (13/13)
+
+[info] 
+> Export encountered errors on following paths:
+	/feed.xml/route: /feed.xml
+
+[debug] [2024-05-29T07:23:45.445Z] Error: ENOENT: no such file or directory, open '/home/user/richkevan-next/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-05-29T07:26:02.755Z] ----------------------------------------------------------------------
+[debug] [2024-05-29T07:26:02.759Z] Command:       /nix/store/qfm6zpnicb4q5x6w6y4cpj5z8ap68j3h-nodejs-18.19.1/bin/node /nix/store/cgci1g1m5rzdxbwnl9lgzfyfc2lkynd4-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/bin/firebase.js hosting:channel:deploy testing
+[debug] [2024-05-29T07:26:02.759Z] CLI Version:   13.9.0
+[debug] [2024-05-29T07:26:02.760Z] Platform:      linux
+[debug] [2024-05-29T07:26:02.760Z] Node Version:  v18.19.1
+[debug] [2024-05-29T07:26:02.760Z] Time:          Wed May 29 2024 07:26:02 GMT+0000 (Coordinated Universal Time)
+[debug] [2024-05-29T07:26:02.761Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-29T07:26:02.867Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-29T07:26:02.868Z] > authorizing via signed-in user (richskevan@gmail.com)
+[debug] [2024-05-29T07:26:02.868Z] [iam] checking project rich-kevan for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-05-29T07:26:02.871Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions [none]
+[debug] [2024-05-29T07:26:02.871Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:26:02.871Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-29T07:26:03.009Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions 200
+[debug] [2024-05-29T07:26:03.010Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-05-29T07:26:03.012Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan [none]
+[debug] [2024-05-29T07:26:03.157Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan 200
+[debug] [2024-05-29T07:26:03.157Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan {"projectId":"rich-kevan","projectNumber":"309886706198","displayName":"rich-kevan","name":"projects/rich-kevan","resources":{"hostingSite":"rich-kevan","storageBucket":"rich-kevan.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_5211c6fd-d395-45b3-ac16-84890b5cc36e"}
+[debug] [2024-05-29T07:26:03.169Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:26:03.472Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:26:03.473Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:23:08.779403593Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:23:08.779403593Z"}
+[debug] [2024-05-29T07:26:03.473Z] [hosting] found existing channel for site rich-kevan {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:23:08.779403593Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:23:08.779403593Z"}
+[debug] [2024-05-29T07:26:03.475Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing updateMask=ttl
+[debug] [2024-05-29T07:26:03.475Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"ttl":"604800s"}
+[debug] [2024-05-29T07:26:03.858Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:26:03.858Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:26:03.801028610Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:26:03.801028610Z"}
+[debug] [2024-05-29T07:26:03.858Z] [hosting] updated TTL for existing channel for site rich-kevan {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:26:03.801028610Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:26:03.801028610Z"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-05-29T07:26:15.613Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:26:15.909Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:26:15.909Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:26:03.801028610Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:26:03.801028610Z"}
+[info]   ▲ Next.js 14.3.0-canary.9
+
+[info]   - Environments: .env
+
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+[info]    Collecting page data ...
+
+[info]    Generating static pages (0/13) ...
+
+[info]    Generating static pages (3/13) 
+
+[info]    Generating static pages (6/13) 
+
+[info]    Generating static pages (9/13) 
+
+[info]  ✓ Generating static pages (13/13)
+
+[info]    Finalizing page optimization ...
+
+[info]    Collecting build traces ...
+
+[info] 
+
+[info] Route (app)                                                Size     First Load JS
+┌ ○ /                                                      4.48 kB         103 kB
+├ ○ /_not-found                                            139 B          87.1 kB
+├ ○ /about                                                 678 B          99.5 kB
+├ ○ /articles                                              3.17 kB         102 kB
+├ ƒ /articles/rewriting-and-redefining-the-resume-with-ai  3.24 kB        95.3 kB
+├ ƒ /feed.xml                                              0 B                0 B
+├ ○ /projects                                              429 B          99.3 kB
+├ ○ /speaking                                              177 B            94 kB
+├ ○ /thank-you                                             139 B          87.1 kB
+└ ○ /uses                                                  177 B            94 kB
++ First Load JS shared by all                              87 kB
+  ├ chunks/23-8691a1dd36a40b3a.js                          31.5 kB
+  ├ chunks/fd9d1056-42ee5f05bd0804ac.js                    53.7 kB
+  └ other shared chunks (total)                            1.83 kB
+
+
+[info] 
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+
+[info] Building a Cloud Function to run this application. This is needed due to:
+[info]  • Image Optimization
+[info]  • non-static component /feed.xml/route
+[info]  • non-static component /articles/rewriting-and-redefining-the-resume-with-ai/page
+[info] 
+[debug] [2024-05-29T07:27:13.859Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing [none]
+[debug] [2024-05-29T07:27:14.222Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing 200
+[debug] [2024-05-29T07:27:14.223Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/rich-kevan/sites/rich-kevan/channels/testing {"name":"projects/rich-kevan/sites/rich-kevan/channels/testing","url":"https://rich-kevan--testing-2ljht4i0.web.app","createTime":"2024-05-29T07:19:35.158632463Z","updateTime":"2024-05-29T07:26:03.801028610Z","retainedReleaseCount":10,"expireTime":"2024-06-05T07:26:03.801028610Z"}
+[debug] [2024-05-29T07:27:50.103Z] [web frameworks] effective firebase.json:  {
+  "hosting": [
+    {
+      "source": ".",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "frameworksBackend": {
+        "region": "us-west1"
+      },
+      "site": "rich-kevan",
+      "rewrites": [
+        {
+          "source": "**",
+          "function": {
+            "functionId": "ssrrichkevan",
+            "region": "us-west1",
+            "pinTag": true
+          }
+        }
+      ],
+      "redirects": [],
+      "headers": [
+        {
+          "source": "/_not-found",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/_not-found/layout,_N_T_/_not-found/page,_N_T_/_not-found"
+            }
+          ]
+        },
+        {
+          "source": "/favicon.ico",
+          "headers": [
+            {
+              "key": "cache-control",
+              "value": "public, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "image/x-icon"
+            },
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/favicon.ico/layout,_N_T_/favicon.ico/route,_N_T_/favicon.ico"
+            }
+          ]
+        },
+        {
+          "source": "/about",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/about/layout,_N_T_/about/page,_N_T_/about"
+            }
+          ]
+        },
+        {
+          "source": "/articles",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/articles/layout,_N_T_/articles/page,_N_T_/articles"
+            }
+          ]
+        },
+        {
+          "source": "/projects",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/projects/layout,_N_T_/projects/page,_N_T_/projects"
+            }
+          ]
+        },
+        {
+          "source": "/speaking",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/speaking/layout,_N_T_/speaking/page,_N_T_/speaking"
+            }
+          ]
+        },
+        {
+          "source": "/thank-you",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/thank-you/layout,_N_T_/thank-you/page,_N_T_/thank-you"
+            }
+          ]
+        },
+        {
+          "source": "/uses",
+          "headers": [
+            {
+              "key": "x-next-cache-tags",
+              "value": "_N_T_/layout,_N_T_/uses/layout,_N_T_/uses/page,_N_T_/uses"
+            }
+          ]
+        }
+      ],
+      "cleanUrls": true,
+      "trailingSlash": false,
+      "public": ".firebase/rich-kevan/hosting",
+      "webFramework": "next_ssr"
+    }
+  ],
+  "functions": [
+    {
+      "source": ".firebase/rich-kevan/functions",
+      "codebase": "firebase-frameworks-rich-kevan"
+    }
+  ]
+}
+[debug] [2024-05-29T07:27:50.105Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-29T07:27:50.105Z] > authorizing via signed-in user (richskevan@gmail.com)
+[debug] [2024-05-29T07:27:50.105Z] [iam] checking project rich-kevan for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-05-29T07:27:50.106Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions [none]
+[debug] [2024-05-29T07:27:50.106Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:27:50.106Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-05-29T07:27:50.229Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions 200
+[debug] [2024-05-29T07:27:50.229Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-05-29T07:27:50.231Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/rich-kevan/locations/-/functions [none]
+[debug] [2024-05-29T07:27:50.660Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/rich-kevan/locations/-/functions 200
+[debug] [2024-05-29T07:27:50.661Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/rich-kevan/locations/-/functions {}
+[debug] [2024-05-29T07:27:50.662Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-05-29T07:27:51.144Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/-/functions 200
+[debug] [2024-05-29T07:27:51.145Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/-/functions {"functions":[{"name":"projects/rich-kevan/locations/us-central1/functions/instaDownloadVideo","buildConfig":{"build":"projects/309886706198/locations/us-central1/builds/9367e5eb-9f4a-4eec-97e6-7ee2bccb6382","runtime":"nodejs18","entryPoint":"instaDownloadVideo","source":{"storageSource":{"bucket":"gcf-v2-sources-309886706198-us-central1","object":"instaDownloadVideo/function-source.zip","generation":"1697139554173337"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/rich-kevan/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-309886706198-us-central1","object":"instaDownloadVideo/function-source.zip","generation":"1697139554173337"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/rich-kevan/locations/us-central1/services/instadownloadvideo","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"rich-kevan\",\"storageBucket\":\"rich-kevan.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"rich-kevan","EVENTARC_CLOUD_EVENT_SOURCE":"projects/rich-kevan/locations/us-central1/services/instaDownloadVideo"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://instadownloadvideo-mr2xxcosrq-uc.a.run.app","serviceAccountEmail":"309886706198-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"instadownloadvideo-00014-biw","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2024-03-17T02:11:31.829569360Z","labels":{"firebase-functions-hash":"bff8169e9e43dba33ffb161409b0574a620e15fc","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-rich-kevan.cloudfunctions.net/instaDownloadVideo","createTime":"2023-10-12T14:38:31.655851273Z"},{"name":"projects/rich-kevan/locations/us-central1/functions/youtubeDownload","buildConfig":{"build":"projects/309886706198/locations/us-central1/builds/4bdabaea-aba6-4245-a042-c70c02b9bb23","runtime":"nodejs18","entryPoint":"youtubeDownload","source":{"storageSource":{"bucket":"gcf-v2-sources-309886706198-us-central1","object":"youtubeDownload/function-source.zip","generation":"1697064567435155"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/rich-kevan/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-309886706198-us-central1","object":"youtubeDownload/function-source.zip","generation":"1697064567435155"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/rich-kevan/locations/us-central1/services/youtubedownload","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"rich-kevan\",\"storageBucket\":\"rich-kevan.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"rich-kevan","EVENTARC_CLOUD_EVENT_SOURCE":"projects/rich-kevan/locations/us-central1/services/youtubeDownload"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://youtubedownload-mr2xxcosrq-uc.a.run.app","serviceAccountEmail":"309886706198-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"youtubedownload-00022-fuy","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2024-03-17T02:11:31.702867206Z","labels":{"firebase-functions-hash":"d0ea94c91c5fa1878fbcfb5b858b7891f5d513c0","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-rich-kevan.cloudfunctions.net/youtubeDownload","createTime":"2023-10-11T14:45:38.799744034Z"},{"name":"projects/rich-kevan/locations/us-central1/functions/instaDownloadImage","buildConfig":{"build":"projects/309886706198/locations/us-central1/builds/a9fb7e87-1c5f-477b-9d4c-a0574606be77","runtime":"nodejs18","entryPoint":"instaDownloadImage","source":{"storageSource":{"bucket":"gcf-v2-sources-309886706198-us-central1","object":"instaDownloadImage/function-source.zip","generation":"1697139554073492"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/rich-kevan/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-309886706198-us-central1","object":"instaDownloadImage/function-source.zip","generation":"1697139554073492"}},"dockerRegistry":"ARTIFACT_REGISTRY"},"serviceConfig":{"service":"projects/rich-kevan/locations/us-central1/services/instadownloadimage","timeoutSeconds":60,"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"rich-kevan\",\"storageBucket\":\"rich-kevan.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"rich-kevan","EVENTARC_CLOUD_EVENT_SOURCE":"projects/rich-kevan/locations/us-central1/services/instaDownloadImage"},"maxInstanceCount":100,"ingressSettings":"ALLOW_ALL","uri":"https://instadownloadimage-mr2xxcosrq-uc.a.run.app","serviceAccountEmail":"309886706198-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"instadownloadimage-00014-jaz","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2024-03-17T02:11:31.705645196Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"bff8169e9e43dba33ffb161409b0574a620e15fc"},"environment":"GEN_2","url":"https://us-central1-rich-kevan.cloudfunctions.net/instaDownloadImage","createTime":"2023-10-12T14:38:31.482951643Z"}]}
+[info] i  hosting: The following function(s) are pinned to site rich-kevan and will be deployed as well: ssrrichkevan 
+[info] 
+[info] === Deploying to 'rich-kevan'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2024-05-29T07:27:51.160Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan [none]
+[debug] [2024-05-29T07:27:51.284Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan 200
+[debug] [2024-05-29T07:27:51.295Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan {"projectId":"rich-kevan","projectNumber":"309886706198","displayName":"rich-kevan","name":"projects/rich-kevan","resources":{"hostingSite":"rich-kevan","storageBucket":"rich-kevan.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_5211c6fd-d395-45b3-ac16-84890b5cc36e"}
+[info] i  functions: preparing codebase firebase-frameworks-rich-kevan for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-05-29T07:27:51.304Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-05-29T07:27:51.304Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:27:51.310Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-05-29T07:27:51.310Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:27:51.312Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/cloudbuild.googleapis.com [none]
+[debug] [2024-05-29T07:27:51.312Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/cloudbuild.googleapis.com x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:27:51.315Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/artifactregistry.googleapis.com [none]
+[debug] [2024-05-29T07:27:51.315Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/artifactregistry.googleapis.com x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:27:51.680Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/runtimeconfig.googleapis.com 200
+[debug] [2024-05-29T07:27:51.681Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-05-29T07:27:51.682Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/cloudbuild.googleapis.com 200
+[debug] [2024-05-29T07:27:51.682Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-05-29T07:27:51.714Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/cloudfunctions.googleapis.com 200
+[debug] [2024-05-29T07:27:51.715Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-05-29T07:27:51.724Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/artifactregistry.googleapis.com 200
+[debug] [2024-05-29T07:27:51.724Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-05-29T07:27:51.725Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan/adminSdkConfig [none]
+[debug] [2024-05-29T07:27:52.017Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan/adminSdkConfig 200
+[debug] [2024-05-29T07:27:52.017Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan/adminSdkConfig {"projectId":"rich-kevan","storageBucket":"rich-kevan.appspot.com","locationId":"us-central"}
+[debug] [2024-05-29T07:27:52.018Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/rich-kevan/configs [none]
+[debug] [2024-05-29T07:27:52.186Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/rich-kevan/configs 200
+[debug] [2024-05-29T07:27:52.187Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/rich-kevan/configs {}
+[debug] [2024-05-29T07:27:52.190Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-05-29T07:27:53.542Z] > [functions] package.json contents: {
+  "name": "out",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@headlessui/react": "^2.0.1",
+    "@mapbox/rehype-prism": "^0.9.0",
+    "@mdx-js/loader": "^3.0.0",
+    "@mdx-js/react": "^3.0.0",
+    "@next/mdx": "^14.0.4",
+    "@types/webpack-env": "^1.18.1",
+    "autoprefixer": "^10.4.12",
+    "cheerio": "^1.0.0-rc.12",
+    "clsx": "^2.1.0",
+    "fast-glob": "^3.2.11",
+    "feed": "^4.2.2",
+    "next": "14.3.0-canary.9",
+    "next-themes": "^0.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark-gfm": "^4.0.0",
+    "@tailwindcss/typography": "^0.5.13",
+    "sharp": "^0.32.1",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-functions": "^4.5.0",
+    "firebase-admin": "^11.11.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "18"
+  }
+}
+[debug] [2024-05-29T07:27:53.543Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase firebase-frameworks-rich-kevan to determine what to deploy 
+[debug] [2024-05-29T07:27:53.546Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-05-29T07:27:53.554Z] Found firebase-functions binary at '/home/user/richkevan-next/.firebase/rich-kevan/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8078
+
+[debug] [2024-05-29T07:27:54.040Z] Got response from /__/functions.yaml {"endpoints":{"ssrrichkevan":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","region":["us-west1"],"labels":{},"httpsTrigger":{},"entryPoint":"ssrrichkevan"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing .firebase/rich-kevan/functions directory for uploading... 
+[info] i  functions: packaged /home/user/richkevan-next/.firebase/rich-kevan/functions (40.41 MB) for uploading 
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-05-29T07:28:00.233Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/run.googleapis.com [none]
+[debug] [2024-05-29T07:28:00.233Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/run.googleapis.com x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:28:00.237Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/eventarc.googleapis.com [none]
+[debug] [2024-05-29T07:28:00.237Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/eventarc.googleapis.com x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:28:00.238Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/pubsub.googleapis.com [none]
+[debug] [2024-05-29T07:28:00.239Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/pubsub.googleapis.com x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:28:00.240Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/storage.googleapis.com [none]
+[debug] [2024-05-29T07:28:00.240Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/storage.googleapis.com x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:28:00.606Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/eventarc.googleapis.com 200
+[debug] [2024-05-29T07:28:00.606Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-05-29T07:28:00.617Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/run.googleapis.com 200
+[debug] [2024-05-29T07:28:00.617Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[debug] [2024-05-29T07:28:00.618Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/pubsub.googleapis.com 200
+[debug] [2024-05-29T07:28:00.618Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-05-29T07:28:00.738Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/storage.googleapis.com 200
+[debug] [2024-05-29T07:28:00.738Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/rich-kevan/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-05-29T07:28:00.740Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/309886706198/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-05-29T07:28:00.742Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/309886706198/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-05-29T07:28:01.209Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/309886706198/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-05-29T07:28:01.209Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/309886706198/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-309886706198@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"103512633221320141505"}}
+[debug] [2024-05-29T07:28:01.258Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/309886706198/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-05-29T07:28:01.267Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/309886706198/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-309886706198@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"110090950941682413073"}}
+[debug] [2024-05-29T07:28:01.274Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan [none]
+[debug] [2024-05-29T07:28:01.422Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan 200
+[debug] [2024-05-29T07:28:01.432Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/rich-kevan {"projectId":"rich-kevan","projectNumber":"309886706198","displayName":"rich-kevan","name":"projects/rich-kevan","resources":{"hostingSite":"rich-kevan","storageBucket":"rich-kevan.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_5211c6fd-d395-45b3-ac16-84890b5cc36e"}
+[debug] [2024-05-29T07:28:01.439Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rich-kevan/versions [none]
+[debug] [2024-05-29T07:28:01.439Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rich-kevan/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase--project-idx","firebase-web-framework":"next_ssr"}}
+[debug] [2024-05-29T07:28:02.172Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rich-kevan/versions 200
+[debug] [2024-05-29T07:28:02.172Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/rich-kevan/versions {"name":"projects/309886706198/sites/rich-kevan/versions/5eab2b54f3b1cd5e","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase--project-idx","firebase-web-framework":"next_ssr"}}
+[debug] [2024-05-29T07:28:02.180Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2024-05-29T07:28:02.181Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions [none]
+[debug] [2024-05-29T07:28:02.181Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions x-goog-quota-user=projects/rich-kevan
+[debug] [2024-05-29T07:28:02.181Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2024-05-29T07:28:02.247Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions 200
+[debug] [2024-05-29T07:28:02.247Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/rich-kevan:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2024-05-29T07:28:02.247Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2024-05-29T07:28:02.249Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/us-west1/functions:generateUploadUrl [none]
+[debug] [2024-05-29T07:28:02.491Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/us-west1/functions:generateUploadUrl 200
+[debug] [2024-05-29T07:28:02.491Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/us-west1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-309886706198-us-west1/32d01d20-b0e0-4910-9e5d-15a6cffc0e16.zip?GoogleAccessId=service-309886706198@gcf-admin-robot.iam.gserviceaccount.com&Expires=1716969482&Signature=TqvgID8dmbQ2DzRZFm3NFrDrbd7%2BRJsJChgexh8%2FKaXhwgw%2BG5S8c9j2YclV3QXRMDBXe4KbUomyL4GwIaDB%2BUPRdnYcj2ljflxGMkxtIDs5dKm%2B40GgUeHgcAdYgVfWcy7Tm6E1AzszddPddxYo8r2Vq4FarXQfw%2BnmIPGblEdc3MlqcomxOzf19YNWJXS48dTMYH5Qo64erbFuIQ4%2BtMEk7D1%2Fg3WFekPx6t3iPfSylC8IhDZfhJfkNmtADU20Z0M8CnWRRvHbmE%2BlpJ4pPoFxYJyjHUN7g0Hjx%2FWQpFX6KHKp4Ye2eRSNAF6ojaMHKWO6P5ALRVpwTa58GCr%2FdQ%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-309886706198-us-west1","object":"32d01d20-b0e0-4910-9e5d-15a6cffc0e16.zip"}}
+[debug] [2024-05-29T07:28:02.495Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-309886706198-us-west1/32d01d20-b0e0-4910-9e5d-15a6cffc0e16.zip GoogleAccessId=service-309886706198%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1716969482&Signature=TqvgID8dmbQ2DzRZFm3NFrDrbd7%2BRJsJChgexh8%2FKaXhwgw%2BG5S8c9j2YclV3QXRMDBXe4KbUomyL4GwIaDB%2BUPRdnYcj2ljflxGMkxtIDs5dKm%2B40GgUeHgcAdYgVfWcy7Tm6E1AzszddPddxYo8r2Vq4FarXQfw%2BnmIPGblEdc3MlqcomxOzf19YNWJXS48dTMYH5Qo64erbFuIQ4%2BtMEk7D1%2Fg3WFekPx6t3iPfSylC8IhDZfhJfkNmtADU20Z0M8CnWRRvHbmE%2BlpJ4pPoFxYJyjHUN7g0Hjx%2FWQpFX6KHKp4Ye2eRSNAF6ojaMHKWO6P5ALRVpwTa58GCr%2FdQ%3D%3D
+[debug] [2024-05-29T07:28:02.495Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-309886706198-us-west1/32d01d20-b0e0-4910-9e5d-15a6cffc0e16.zip [stream]
+[debug] [2024-05-29T07:28:03.081Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-309886706198-us-west1/32d01d20-b0e0-4910-9e5d-15a6cffc0e16.zip 200
+[debug] [2024-05-29T07:28:03.082Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-309886706198-us-west1/32d01d20-b0e0-4910-9e5d-15a6cffc0e16.zip [omitted]
+[info] ✔  functions: .firebase/rich-kevan/functions folder uploaded successfully 
+[info] i  hosting[rich-kevan]: beginning deploy... 
+[info] i  hosting[rich-kevan]: found 53 files in .firebase/rich-kevan/hosting 
+[debug] [2024-05-29T07:28:03.117Z] [hosting] uploading with 200 concurrency
+[debug] [2024-05-29T07:28:03.119Z] [hosting] hash cache [LmZpcmViYXNlL3JpY2gta2V2YW4vaG9zdGluZw] not populated
+[debug] [2024-05-29T07:28:04.091Z] [hosting] hash cache [LmZpcmViYXNlL3JpY2gta2V2YW4vaG9zdGluZw] stored for 53 files
+[debug] [2024-05-29T07:28:04.091Z] [hosting][hash queue][FINAL] {"max":963,"min":142,"avg":264.39622641509436,"active":0,"complete":53,"success":53,"errored":0,"retried":0,"total":53,"elapsed":972}
+[debug] [2024-05-29T07:28:04.092Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/309886706198/sites/rich-kevan/versions/5eab2b54f3b1cd5e:populateFiles [none]
+[debug] [2024-05-29T07:28:04.092Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/309886706198/sites/rich-kevan/versions/5eab2b54f3b1cd5e:populateFiles {"files":{"/404.html":"cb1a490b23c359aed86c4020f4bfe33966d79023f89d88adf20ee02361d3ff41","/about.html":"15b4e6d132d9c6169c3d97c92ee75881d78130e0349a62f736d33a46f7264f7a","/articles.html":"79a516511886e9b32389a82c400b1c07a9f9c5e21d09d29a83049391729fdba9","/favicon.ico":"494c654b884258c374800867697430551ecd82ab9b3e29c7d81a8be3c56ecf0c","/next.svg":"69fb75aede79b670cc3a774cf34561364d373632c78ed59342781868b751d105","/projects.html":"6ca49cd775819e4cf4603d7a3a4182523526cb7f9b9014c3d24ca48e1c33a5ae","/speaking.html":"5564685f42fc0adae0ba49be2e5b4ab7d6b7ed4ed9624ca480dd609a6546c3c4","/thank-you.html":"c980e223f3b9e865dc681abc6bceeba81717d32eeedbd93a8999803729a99523","/uses.html":"abf52b5ff1befca938cae6e7a4d613d57f6021c66ae3c41c26aa98e380b2ec4e","/vercel.svg":"56529d5c05555c7bd45b85b6ad14f98f64d975e95b5c7c4f52a4b4cd812e816e","/_next/static/chunks/173-14e9f2a506d15e01.js":"4856e6b80127358bc82c45baa6e77eafaa17225926f6d8affef54c19a588ff7f","/_next/static/chunks/231-c6c26d957f1c422e.js":"ad71dcd1ec8f201cf4c852788d67f8a3f54e7b21158c38fa20735933ede293b9","/_next/static/chunks/main-app-6f800057629c9145.js":"dcc4b816cb90b3055e9d7581e1aebcf23575bdfaf1f9da0a3cbc29e3c7d139fc","/_next/static/chunks/app/layout-3dbe64c3db2a0cba.js":"3dcf52b37a4052d9ca2e8371881b967913b113c2d157dd483a3070528c4d8911","/_next/static/chunks/app/not-found-04d59eb9f0ebbcb1.js":"8db1b0e81eefb890c3f716294bd6d44c52e9788252567edaa0428fdcea1b3e23","/_next/static/chunks/app/_not-found/page-5948c61ffdeb4076.js":"7f5f1e7787b08cce7e41e2efd7787d5ea05785e2fcaf796a6560a927c4a28e65","/_next/static/chunks/app/about/page-03a3dec5c74edc9f.js":"8e9ca5307d8bca3d8d68b6c92b576b995fe298e03bd28a48a1c70626e96586c7","/_next/static/chunks/webpack-93f6744072c2a416.js":"bed386ad5737e18aeb7af67fda59a302c2018df438c90f55b0cca16d75ae5155","/_next/static/chunks/app/articles/rewriting-and-redefining-the-resume-with-ai/page-d42a4801f330eeaf.js":"0ffbd3fe28ed61d680609ffd164df13b8e6073b7708286fd1a84c5d8020083fa","/_next/static/chunks/app/projects/page-69a61cb64d6d9f1a.js":"e995cfddfc63798d4cdd419cfae347d67e1e2891eef05ea5647cf6fc20133b99","/_next/static/chunks/app/speaking/page-9e4689ad047ec085.js":"3a0ddd42f9af0b423326f4827681009e97014139de975d7aabd4aca5981918c5","/_next/static/chunks/app/thank-you/page-a6ad7cfd0ddf73d2.js":"d85950830ad12c21d9e8b1287ad9770b11f6b5a7784c2e319791cc90d3772376","/_next/static/chunks/app/uses/page-5e1da6e39eabf593.js":"b9888d8c49f941283e404b2f45d3cbbab99b8ddfba150e770a3c8c0365ef715e","/_next/static/chunks/pages/_app-6a626577ffa902a4.js":"45a9a5c4f9d1e9b7a36461c133622f24dd8da216c0a84947aa80e3732b0fa19d","/_next/static/chunks/pages/_error-1be831200e60c5c0.js":"aa28c2d41baaf3a0744b6f87b686bcb66704a78696a82da2276ed489d02a5653","/_next/static/css/77b72c7a93cd3668.css":"0caf6f001b398d5979274a6af5658b362a75adc2197e0910bc196d95e42a157d","/_next/static/chunks/app/page-1664906199874216.js":"ad68ed55ba8af3314fe989686e6a140e6459633a2de9d9392601e6accd1cfc1b","/_next/static/chunks/app/articles/page-c593b2ec332d6ab1.js":"476da6a08fbaa063b66ea398321c06ea79208d117decd234509752475a3b67c6","/_next/static/media/bayside.ac6f968c.svg":"9d6c3f81b40fd4a928f804df8c8185761fcd49adfbf1affb67ce265a6ef11ede","/_next/static/media/codeplatoon.7f78ae39.svg":"ea073e630695ab3581f25d236d6588c709d34fe1a8e4a400060363c1ef1ebade","/_next/static/media/authn0de.27d7865b.svg":"446d44be69b1c4dc8c42e7d4603314ded5ee86aeaf3d84c7f94e26f11f05c713","/_next/static/media/contentcreatorcontrol.33c9bc9d.svg":"3c3378193f4367aae07dfe8560d525155d2b47c23c111cbce0b04fc639860735","/_next/static/media/instantteams.82a91cab.svg":"3089ed3742291279e585ed48367a4dd4274483cdfeeb7df27bd5c991558b6215","/index.html":"05190cef6565e4e9f08cafeae8bc8b2763797e3d57dfd7443615ccaae466aa56","/_next/static/chunks/23-8691a1dd36a40b3a.js":"c6c40e2f8b65601654e3d5e4fb9ae08e848e862f3df74439290403206bada0ba","/_next/static/chunks/main-c8e2e5b26db9f4fb.js":"988968c883c164861febb3470f0518d13ed7fca1167f0950b679c26a56ddae2c","/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js":"6e18f0fa5cab85424da6735cf5c47a2eface2e14cc8714e248982c7587cd444a","/_next/static/chunks/476-79a7d9870529f861.js":"0e002dea937ff2f4e3a98276c521c265ebac6f21c3050fc1de6d7d2b540ddd37","/_next/static/media/djauth0.5b8ba569.svg":"74e62426531fa09b2650a1c38a3222249a45a320b38ecf5e66f9c33205851fc4","/_next/static/sWYDc86OdFAf_WJRVN1fp/_buildManifest.js":"42e046c763197ab1e668bdf5ef48faa0fea24489f383e7e8ee1f27cb1711157d","/_next/static/sWYDc86OdFAf_WJRVN1fp/_ssgManifest.js":"d8d8790f4e673a23bec506f00699bed8a258ac0e4965bb1ca8598172cfc0ec97","/_next/static/media/ydkJS.efa3d64d.svg":"66abb6c1635e7930a3da7b01f531d21fa8b7e1c93edbe971c193c52b2f5984dc","/_next/static/chunks/framework-f66176bb897dc684.js":"3d3641ad9bda468d50506b0f8986d8c8e335d87e601a0052e672859d5427512c","/_next/static/chunks/fd9d1056-42ee5f05bd0804ac.js":"4a24c6e83b8e0837b0cc4269400e31239bbcb55abfb8c1ba2cc7dd4e4a261e7d","/_next/static/media/guestbook.db9fcfe2.svg":"a1ba2df63daa75b8799df9d04aefa19eede1e98ff2192b0e867a2ecd6c2cc09c","/_next/static/media/ydkdjango.5c0f2f7d.svg":"100a6032929a01d82d4bb30ea60bff906f126848a08dcec5792ae26bc04167b8","/_next/static/media/image-1.b35898cd.jpg":"4b1e511eef75c8e05575cf1862e6931f23b4e5d3b5f4d2b1621a4c0458f2a8da","/_next/static/media/avatar.3705dd69.jpg":"2ce4cdc44a6f040124eb5bee8c723c13174f928cb1a26ee6232676b32efb1a1d","/_next/static/media/portrait.3705dd69.jpg":"2ce4cdc44a6f040124eb5bee8c723c13174f928cb1a26ee6232676b32efb1a1d","/_next/static/media/image-3.f1fa1e4b.jpg":"03e5435e024842bd207e33955bb431e3bfa19457ac1e136c31297746c3ca05e7","/_next/static/media/image-4.1329d4fb.jpg":"057927e86f77e3f3f1adff7b3adc305201c3a87b013ad1c4af1dab9c847583a3","/_next/static/media/image-5.0bc27502.jpg":"78a108229ed6589fa4b36be0328313431198fd0e6b9cf62374d01daf877337c9","/_next/static/media/image-2.854bcd23.jpg":"2b068f8bc9ec177a8730cce518186badb1c41fb6dcfa1d0d145cc40875bf53c2"}}
+[debug] [2024-05-29T07:28:04.540Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/309886706198/sites/rich-kevan/versions/5eab2b54f3b1cd5e:populateFiles 200
+[debug] [2024-05-29T07:28:04.540Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/309886706198/sites/rich-kevan/versions/5eab2b54f3b1cd5e:populateFiles {"uploadRequiredHashes":["ea073e630695ab3581f25d236d6588c709d34fe1a8e4a400060363c1ef1ebade","a1ba2df63daa75b8799df9d04aefa19eede1e98ff2192b0e867a2ecd6c2cc09c","3dcf52b37a4052d9ca2e8371881b967913b113c2d157dd483a3070528c4d8911","cb1a490b23c359aed86c4020f4bfe33966d79023f89d88adf20ee02361d3ff41","15b4e6d132d9c6169c3d97c92ee75881d78130e0349a62f736d33a46f7264f7a","6ca49cd775819e4cf4603d7a3a4182523526cb7f9b9014c3d24ca48e1c33a5ae","9d6c3f81b40fd4a928f804df8c8185761fcd49adfbf1affb67ce265a6ef11ede","6e18f0fa5cab85424da6735cf5c47a2eface2e14cc8714e248982c7587cd444a","0e002dea937ff2f4e3a98276c521c265ebac6f21c3050fc1de6d7d2b540ddd37","4b1e511eef75c8e05575cf1862e6931f23b4e5d3b5f4d2b1621a4c0458f2a8da","74e62426531fa09b2650a1c38a3222249a45a320b38ecf5e66f9c33205851fc4","d8d8790f4e673a23bec506f00699bed8a258ac0e4965bb1ca8598172cfc0ec97","42e046c763197ab1e668bdf5ef48faa0fea24489f383e7e8ee1f27cb1711157d","bed386ad5737e18aeb7af67fda59a302c2018df438c90f55b0cca16d75ae5155","03e5435e024842bd207e33955bb431e3bfa19457ac1e136c31297746c3ca05e7","ad71dcd1ec8f201cf4c852788d67f8a3f54e7b21158c38fa20735933ede293b9","3c3378193f4367aae07dfe8560d525155d2b47c23c111cbce0b04fc639860735","c980e223f3b9e865dc681abc6bceeba81717d32eeedbd93a8999803729a99523","476da6a08fbaa063b66ea398321c06ea79208d117decd234509752475a3b67c6","b9888d8c49f941283e404b2f45d3cbbab99b8ddfba150e770a3c8c0365ef715e","c6c40e2f8b65601654e3d5e4fb9ae08e848e862f3df74439290403206bada0ba","4856e6b80127358bc82c45baa6e77eafaa17225926f6d8affef54c19a588ff7f","45a9a5c4f9d1e9b7a36461c133622f24dd8da216c0a84947aa80e3732b0fa19d","494c654b884258c374800867697430551ecd82ab9b3e29c7d81a8be3c56ecf0c","79a516511886e9b32389a82c400b1c07a9f9c5e21d09d29a83049391729fdba9","ad68ed55ba8af3314fe989686e6a140e6459633a2de9d9392601e6accd1cfc1b","8db1b0e81eefb890c3f716294bd6d44c52e9788252567edaa0428fdcea1b3e23","78a108229ed6589fa4b36be0328313431198fd0e6b9cf62374d01daf877337c9","446d44be69b1c4dc8c42e7d4603314ded5ee86aeaf3d84c7f94e26f11f05c713","abf52b5ff1befca938cae6e7a4d613d57f6021c66ae3c41c26aa98e380b2ec4e","057927e86f77e3f3f1adff7b3adc305201c3a87b013ad1c4af1dab9c847583a3","2b068f8bc9ec177a8730cce518186badb1c41fb6dcfa1d0d145cc40875bf53c2","2ce4cdc44a6f040124eb5bee8c723c13174f928cb1a26ee6232676b32efb1a1d","05190cef6565e4e9f08cafeae8bc8b2763797e3d57dfd7443615ccaae466aa56","4a24c6e83b8e0837b0cc4269400e31239bbcb55abfb8c1ba2cc7dd4e4a261e7d","8e9ca5307d8bca3d8d68b6c92b576b995fe298e03bd28a48a1c70626e96586c7","69fb75aede79b670cc3a774cf34561364d373632c78ed59342781868b751d105","3089ed3742291279e585ed48367a4dd4274483cdfeeb7df27bd5c991558b6215","0ffbd3fe28ed61d680609ffd164df13b8e6073b7708286fd1a84c5d8020083fa","3a0ddd42f9af0b423326f4827681009e97014139de975d7aabd4aca5981918c5","56529d5c05555c7bd45b85b6ad14f98f64d975e95b5c7c4f52a4b4cd812e816e","5564685f42fc0adae0ba49be2e5b4ab7d6b7ed4ed9624ca480dd609a6546c3c4","d85950830ad12c21d9e8b1287ad9770b11f6b5a7784c2e319791cc90d3772376","0caf6f001b398d5979274a6af5658b362a75adc2197e0910bc196d95e42a157d","7f5f1e7787b08cce7e41e2efd7787d5ea05785e2fcaf796a6560a927c4a28e65","988968c883c164861febb3470f0518d13ed7fca1167f0950b679c26a56ddae2c","e995cfddfc63798d4cdd419cfae347d67e1e2891eef05ea5647cf6fc20133b99","66abb6c1635e7930a3da7b01f531d21fa8b7e1c93edbe971c193c52b2f5984dc","aa28c2d41baaf3a0744b6f87b686bcb66704a78696a82da2276ed489d02a5653","3d3641ad9bda468d50506b0f8986d8c8e335d87e601a0052e672859d5427512c","100a6032929a01d82d4bb30ea60bff906f126848a08dcec5792ae26bc04167b8","dcc4b816cb90b3055e9d7581e1aebcf23575bdfaf1f9da0a3cbc29e3c7d139fc"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files"}
+[debug] [2024-05-29T07:28:04.556Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ea073e630695ab3581f25d236d6588c709d34fe1a8e4a400060363c1ef1ebade [none]
+[debug] [2024-05-29T07:28:04.556Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ea073e630695ab3581f25d236d6588c709d34fe1a8e4a400060363c1ef1ebade [stream]
+[debug] [2024-05-29T07:28:04.558Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/a1ba2df63daa75b8799df9d04aefa19eede1e98ff2192b0e867a2ecd6c2cc09c [none]
+[debug] [2024-05-29T07:28:04.558Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/a1ba2df63daa75b8799df9d04aefa19eede1e98ff2192b0e867a2ecd6c2cc09c [stream]
+[debug] [2024-05-29T07:28:04.559Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3dcf52b37a4052d9ca2e8371881b967913b113c2d157dd483a3070528c4d8911 [none]
+[debug] [2024-05-29T07:28:04.559Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3dcf52b37a4052d9ca2e8371881b967913b113c2d157dd483a3070528c4d8911 [stream]
+[debug] [2024-05-29T07:28:04.560Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/cb1a490b23c359aed86c4020f4bfe33966d79023f89d88adf20ee02361d3ff41 [none]
+[debug] [2024-05-29T07:28:04.560Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/cb1a490b23c359aed86c4020f4bfe33966d79023f89d88adf20ee02361d3ff41 [stream]
+[debug] [2024-05-29T07:28:04.561Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/15b4e6d132d9c6169c3d97c92ee75881d78130e0349a62f736d33a46f7264f7a [none]
+[debug] [2024-05-29T07:28:04.561Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/15b4e6d132d9c6169c3d97c92ee75881d78130e0349a62f736d33a46f7264f7a [stream]
+[debug] [2024-05-29T07:28:04.562Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/6ca49cd775819e4cf4603d7a3a4182523526cb7f9b9014c3d24ca48e1c33a5ae [none]
+[debug] [2024-05-29T07:28:04.562Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/6ca49cd775819e4cf4603d7a3a4182523526cb7f9b9014c3d24ca48e1c33a5ae [stream]
+[debug] [2024-05-29T07:28:04.563Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/9d6c3f81b40fd4a928f804df8c8185761fcd49adfbf1affb67ce265a6ef11ede [none]
+[debug] [2024-05-29T07:28:04.563Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/9d6c3f81b40fd4a928f804df8c8185761fcd49adfbf1affb67ce265a6ef11ede [stream]
+[debug] [2024-05-29T07:28:04.564Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/6e18f0fa5cab85424da6735cf5c47a2eface2e14cc8714e248982c7587cd444a [none]
+[debug] [2024-05-29T07:28:04.564Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/6e18f0fa5cab85424da6735cf5c47a2eface2e14cc8714e248982c7587cd444a [stream]
+[debug] [2024-05-29T07:28:04.565Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0e002dea937ff2f4e3a98276c521c265ebac6f21c3050fc1de6d7d2b540ddd37 [none]
+[debug] [2024-05-29T07:28:04.566Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0e002dea937ff2f4e3a98276c521c265ebac6f21c3050fc1de6d7d2b540ddd37 [stream]
+[debug] [2024-05-29T07:28:04.567Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4b1e511eef75c8e05575cf1862e6931f23b4e5d3b5f4d2b1621a4c0458f2a8da [none]
+[debug] [2024-05-29T07:28:04.567Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4b1e511eef75c8e05575cf1862e6931f23b4e5d3b5f4d2b1621a4c0458f2a8da [stream]
+[debug] [2024-05-29T07:28:04.568Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/74e62426531fa09b2650a1c38a3222249a45a320b38ecf5e66f9c33205851fc4 [none]
+[debug] [2024-05-29T07:28:04.568Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/74e62426531fa09b2650a1c38a3222249a45a320b38ecf5e66f9c33205851fc4 [stream]
+[debug] [2024-05-29T07:28:04.569Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/d8d8790f4e673a23bec506f00699bed8a258ac0e4965bb1ca8598172cfc0ec97 [none]
+[debug] [2024-05-29T07:28:04.569Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/d8d8790f4e673a23bec506f00699bed8a258ac0e4965bb1ca8598172cfc0ec97 [stream]
+[debug] [2024-05-29T07:28:04.570Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/42e046c763197ab1e668bdf5ef48faa0fea24489f383e7e8ee1f27cb1711157d [none]
+[debug] [2024-05-29T07:28:04.570Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/42e046c763197ab1e668bdf5ef48faa0fea24489f383e7e8ee1f27cb1711157d [stream]
+[debug] [2024-05-29T07:28:04.571Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/bed386ad5737e18aeb7af67fda59a302c2018df438c90f55b0cca16d75ae5155 [none]
+[debug] [2024-05-29T07:28:04.571Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/bed386ad5737e18aeb7af67fda59a302c2018df438c90f55b0cca16d75ae5155 [stream]
+[debug] [2024-05-29T07:28:04.573Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/03e5435e024842bd207e33955bb431e3bfa19457ac1e136c31297746c3ca05e7 [none]
+[debug] [2024-05-29T07:28:04.573Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/03e5435e024842bd207e33955bb431e3bfa19457ac1e136c31297746c3ca05e7 [stream]
+[debug] [2024-05-29T07:28:04.574Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ad71dcd1ec8f201cf4c852788d67f8a3f54e7b21158c38fa20735933ede293b9 [none]
+[debug] [2024-05-29T07:28:04.574Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ad71dcd1ec8f201cf4c852788d67f8a3f54e7b21158c38fa20735933ede293b9 [stream]
+[debug] [2024-05-29T07:28:04.575Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3c3378193f4367aae07dfe8560d525155d2b47c23c111cbce0b04fc639860735 [none]
+[debug] [2024-05-29T07:28:04.575Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3c3378193f4367aae07dfe8560d525155d2b47c23c111cbce0b04fc639860735 [stream]
+[debug] [2024-05-29T07:28:04.576Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/c980e223f3b9e865dc681abc6bceeba81717d32eeedbd93a8999803729a99523 [none]
+[debug] [2024-05-29T07:28:04.576Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/c980e223f3b9e865dc681abc6bceeba81717d32eeedbd93a8999803729a99523 [stream]
+[debug] [2024-05-29T07:28:04.577Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/476da6a08fbaa063b66ea398321c06ea79208d117decd234509752475a3b67c6 [none]
+[debug] [2024-05-29T07:28:04.577Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/476da6a08fbaa063b66ea398321c06ea79208d117decd234509752475a3b67c6 [stream]
+[debug] [2024-05-29T07:28:04.578Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/b9888d8c49f941283e404b2f45d3cbbab99b8ddfba150e770a3c8c0365ef715e [none]
+[debug] [2024-05-29T07:28:04.578Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/b9888d8c49f941283e404b2f45d3cbbab99b8ddfba150e770a3c8c0365ef715e [stream]
+[debug] [2024-05-29T07:28:04.579Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/c6c40e2f8b65601654e3d5e4fb9ae08e848e862f3df74439290403206bada0ba [none]
+[debug] [2024-05-29T07:28:04.579Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/c6c40e2f8b65601654e3d5e4fb9ae08e848e862f3df74439290403206bada0ba [stream]
+[debug] [2024-05-29T07:28:04.580Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4856e6b80127358bc82c45baa6e77eafaa17225926f6d8affef54c19a588ff7f [none]
+[debug] [2024-05-29T07:28:04.581Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4856e6b80127358bc82c45baa6e77eafaa17225926f6d8affef54c19a588ff7f [stream]
+[debug] [2024-05-29T07:28:04.582Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/45a9a5c4f9d1e9b7a36461c133622f24dd8da216c0a84947aa80e3732b0fa19d [none]
+[debug] [2024-05-29T07:28:04.582Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/45a9a5c4f9d1e9b7a36461c133622f24dd8da216c0a84947aa80e3732b0fa19d [stream]
+[debug] [2024-05-29T07:28:04.583Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/494c654b884258c374800867697430551ecd82ab9b3e29c7d81a8be3c56ecf0c [none]
+[debug] [2024-05-29T07:28:04.583Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/494c654b884258c374800867697430551ecd82ab9b3e29c7d81a8be3c56ecf0c [stream]
+[debug] [2024-05-29T07:28:04.584Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/79a516511886e9b32389a82c400b1c07a9f9c5e21d09d29a83049391729fdba9 [none]
+[debug] [2024-05-29T07:28:04.584Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/79a516511886e9b32389a82c400b1c07a9f9c5e21d09d29a83049391729fdba9 [stream]
+[debug] [2024-05-29T07:28:04.585Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ad68ed55ba8af3314fe989686e6a140e6459633a2de9d9392601e6accd1cfc1b [none]
+[debug] [2024-05-29T07:28:04.585Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ad68ed55ba8af3314fe989686e6a140e6459633a2de9d9392601e6accd1cfc1b [stream]
+[debug] [2024-05-29T07:28:04.586Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/8db1b0e81eefb890c3f716294bd6d44c52e9788252567edaa0428fdcea1b3e23 [none]
+[debug] [2024-05-29T07:28:04.586Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/8db1b0e81eefb890c3f716294bd6d44c52e9788252567edaa0428fdcea1b3e23 [stream]
+[debug] [2024-05-29T07:28:04.587Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/78a108229ed6589fa4b36be0328313431198fd0e6b9cf62374d01daf877337c9 [none]
+[debug] [2024-05-29T07:28:04.587Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/78a108229ed6589fa4b36be0328313431198fd0e6b9cf62374d01daf877337c9 [stream]
+[debug] [2024-05-29T07:28:04.588Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/446d44be69b1c4dc8c42e7d4603314ded5ee86aeaf3d84c7f94e26f11f05c713 [none]
+[debug] [2024-05-29T07:28:04.588Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/446d44be69b1c4dc8c42e7d4603314ded5ee86aeaf3d84c7f94e26f11f05c713 [stream]
+[debug] [2024-05-29T07:28:04.589Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/abf52b5ff1befca938cae6e7a4d613d57f6021c66ae3c41c26aa98e380b2ec4e [none]
+[debug] [2024-05-29T07:28:04.589Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/abf52b5ff1befca938cae6e7a4d613d57f6021c66ae3c41c26aa98e380b2ec4e [stream]
+[debug] [2024-05-29T07:28:04.590Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/057927e86f77e3f3f1adff7b3adc305201c3a87b013ad1c4af1dab9c847583a3 [none]
+[debug] [2024-05-29T07:28:04.590Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/057927e86f77e3f3f1adff7b3adc305201c3a87b013ad1c4af1dab9c847583a3 [stream]
+[debug] [2024-05-29T07:28:04.591Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/2b068f8bc9ec177a8730cce518186badb1c41fb6dcfa1d0d145cc40875bf53c2 [none]
+[debug] [2024-05-29T07:28:04.591Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/2b068f8bc9ec177a8730cce518186badb1c41fb6dcfa1d0d145cc40875bf53c2 [stream]
+[debug] [2024-05-29T07:28:04.592Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/2ce4cdc44a6f040124eb5bee8c723c13174f928cb1a26ee6232676b32efb1a1d [none]
+[debug] [2024-05-29T07:28:04.592Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/2ce4cdc44a6f040124eb5bee8c723c13174f928cb1a26ee6232676b32efb1a1d [stream]
+[debug] [2024-05-29T07:28:04.593Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/05190cef6565e4e9f08cafeae8bc8b2763797e3d57dfd7443615ccaae466aa56 [none]
+[debug] [2024-05-29T07:28:04.593Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/05190cef6565e4e9f08cafeae8bc8b2763797e3d57dfd7443615ccaae466aa56 [stream]
+[debug] [2024-05-29T07:28:04.595Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4a24c6e83b8e0837b0cc4269400e31239bbcb55abfb8c1ba2cc7dd4e4a261e7d [none]
+[debug] [2024-05-29T07:28:04.595Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4a24c6e83b8e0837b0cc4269400e31239bbcb55abfb8c1ba2cc7dd4e4a261e7d [stream]
+[debug] [2024-05-29T07:28:04.596Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/8e9ca5307d8bca3d8d68b6c92b576b995fe298e03bd28a48a1c70626e96586c7 [none]
+[debug] [2024-05-29T07:28:04.596Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/8e9ca5307d8bca3d8d68b6c92b576b995fe298e03bd28a48a1c70626e96586c7 [stream]
+[debug] [2024-05-29T07:28:04.597Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/69fb75aede79b670cc3a774cf34561364d373632c78ed59342781868b751d105 [none]
+[debug] [2024-05-29T07:28:04.597Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/69fb75aede79b670cc3a774cf34561364d373632c78ed59342781868b751d105 [stream]
+[debug] [2024-05-29T07:28:04.599Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3089ed3742291279e585ed48367a4dd4274483cdfeeb7df27bd5c991558b6215 [none]
+[debug] [2024-05-29T07:28:04.599Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3089ed3742291279e585ed48367a4dd4274483cdfeeb7df27bd5c991558b6215 [stream]
+[debug] [2024-05-29T07:28:04.600Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0ffbd3fe28ed61d680609ffd164df13b8e6073b7708286fd1a84c5d8020083fa [none]
+[debug] [2024-05-29T07:28:04.600Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0ffbd3fe28ed61d680609ffd164df13b8e6073b7708286fd1a84c5d8020083fa [stream]
+[debug] [2024-05-29T07:28:04.601Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3a0ddd42f9af0b423326f4827681009e97014139de975d7aabd4aca5981918c5 [none]
+[debug] [2024-05-29T07:28:04.602Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3a0ddd42f9af0b423326f4827681009e97014139de975d7aabd4aca5981918c5 [stream]
+[debug] [2024-05-29T07:28:04.602Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/56529d5c05555c7bd45b85b6ad14f98f64d975e95b5c7c4f52a4b4cd812e816e [none]
+[debug] [2024-05-29T07:28:04.603Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/56529d5c05555c7bd45b85b6ad14f98f64d975e95b5c7c4f52a4b4cd812e816e [stream]
+[debug] [2024-05-29T07:28:04.603Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/5564685f42fc0adae0ba49be2e5b4ab7d6b7ed4ed9624ca480dd609a6546c3c4 [none]
+[debug] [2024-05-29T07:28:04.604Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/5564685f42fc0adae0ba49be2e5b4ab7d6b7ed4ed9624ca480dd609a6546c3c4 [stream]
+[debug] [2024-05-29T07:28:04.604Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/d85950830ad12c21d9e8b1287ad9770b11f6b5a7784c2e319791cc90d3772376 [none]
+[debug] [2024-05-29T07:28:04.605Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/d85950830ad12c21d9e8b1287ad9770b11f6b5a7784c2e319791cc90d3772376 [stream]
+[debug] [2024-05-29T07:28:04.606Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0caf6f001b398d5979274a6af5658b362a75adc2197e0910bc196d95e42a157d [none]
+[debug] [2024-05-29T07:28:04.606Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0caf6f001b398d5979274a6af5658b362a75adc2197e0910bc196d95e42a157d [stream]
+[debug] [2024-05-29T07:28:04.607Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/7f5f1e7787b08cce7e41e2efd7787d5ea05785e2fcaf796a6560a927c4a28e65 [none]
+[debug] [2024-05-29T07:28:04.607Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/7f5f1e7787b08cce7e41e2efd7787d5ea05785e2fcaf796a6560a927c4a28e65 [stream]
+[debug] [2024-05-29T07:28:04.608Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/988968c883c164861febb3470f0518d13ed7fca1167f0950b679c26a56ddae2c [none]
+[debug] [2024-05-29T07:28:04.608Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/988968c883c164861febb3470f0518d13ed7fca1167f0950b679c26a56ddae2c [stream]
+[debug] [2024-05-29T07:28:04.609Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/e995cfddfc63798d4cdd419cfae347d67e1e2891eef05ea5647cf6fc20133b99 [none]
+[debug] [2024-05-29T07:28:04.609Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/e995cfddfc63798d4cdd419cfae347d67e1e2891eef05ea5647cf6fc20133b99 [stream]
+[debug] [2024-05-29T07:28:04.610Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/66abb6c1635e7930a3da7b01f531d21fa8b7e1c93edbe971c193c52b2f5984dc [none]
+[debug] [2024-05-29T07:28:04.610Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/66abb6c1635e7930a3da7b01f531d21fa8b7e1c93edbe971c193c52b2f5984dc [stream]
+[debug] [2024-05-29T07:28:04.611Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/aa28c2d41baaf3a0744b6f87b686bcb66704a78696a82da2276ed489d02a5653 [none]
+[debug] [2024-05-29T07:28:04.611Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/aa28c2d41baaf3a0744b6f87b686bcb66704a78696a82da2276ed489d02a5653 [stream]
+[debug] [2024-05-29T07:28:04.612Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3d3641ad9bda468d50506b0f8986d8c8e335d87e601a0052e672859d5427512c [none]
+[debug] [2024-05-29T07:28:04.612Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3d3641ad9bda468d50506b0f8986d8c8e335d87e601a0052e672859d5427512c [stream]
+[debug] [2024-05-29T07:28:04.614Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/100a6032929a01d82d4bb30ea60bff906f126848a08dcec5792ae26bc04167b8 [none]
+[debug] [2024-05-29T07:28:04.614Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/100a6032929a01d82d4bb30ea60bff906f126848a08dcec5792ae26bc04167b8 [stream]
+[debug] [2024-05-29T07:28:04.615Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/dcc4b816cb90b3055e9d7581e1aebcf23575bdfaf1f9da0a3cbc29e3c7d139fc [none]
+[debug] [2024-05-29T07:28:04.615Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/dcc4b816cb90b3055e9d7581e1aebcf23575bdfaf1f9da0a3cbc29e3c7d139fc [stream]
+[debug] [2024-05-29T07:28:04.616Z] [hosting][populate queue][FINAL] {"max":466,"min":466,"avg":466,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":527}
+[debug] [2024-05-29T07:28:04.616Z] [hosting] uploads queued: 52
+[debug] [2024-05-29T07:28:05.416Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/45a9a5c4f9d1e9b7a36461c133622f24dd8da216c0a84947aa80e3732b0fa19d 200
+[debug] [2024-05-29T07:28:05.416Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/45a9a5c4f9d1e9b7a36461c133622f24dd8da216c0a84947aa80e3732b0fa19d [stream]
+[debug] [2024-05-29T07:28:05.452Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/aa28c2d41baaf3a0744b6f87b686bcb66704a78696a82da2276ed489d02a5653 200
+[debug] [2024-05-29T07:28:05.453Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/aa28c2d41baaf3a0744b6f87b686bcb66704a78696a82da2276ed489d02a5653 [stream]
+[debug] [2024-05-29T07:28:05.461Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/c6c40e2f8b65601654e3d5e4fb9ae08e848e862f3df74439290403206bada0ba 200
+[debug] [2024-05-29T07:28:05.468Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/c6c40e2f8b65601654e3d5e4fb9ae08e848e862f3df74439290403206bada0ba [stream]
+[debug] [2024-05-29T07:28:05.469Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/494c654b884258c374800867697430551ecd82ab9b3e29c7d81a8be3c56ecf0c 200
+[debug] [2024-05-29T07:28:05.470Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/494c654b884258c374800867697430551ecd82ab9b3e29c7d81a8be3c56ecf0c [stream]
+[debug] [2024-05-29T07:28:05.478Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/6e18f0fa5cab85424da6735cf5c47a2eface2e14cc8714e248982c7587cd444a 200
+[debug] [2024-05-29T07:28:05.478Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/6e18f0fa5cab85424da6735cf5c47a2eface2e14cc8714e248982c7587cd444a [stream]
+[debug] [2024-05-29T07:28:05.498Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4a24c6e83b8e0837b0cc4269400e31239bbcb55abfb8c1ba2cc7dd4e4a261e7d 200
+[debug] [2024-05-29T07:28:05.498Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4a24c6e83b8e0837b0cc4269400e31239bbcb55abfb8c1ba2cc7dd4e4a261e7d [stream]
+[debug] [2024-05-29T07:28:05.504Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/74e62426531fa09b2650a1c38a3222249a45a320b38ecf5e66f9c33205851fc4 200
+[debug] [2024-05-29T07:28:05.504Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/74e62426531fa09b2650a1c38a3222249a45a320b38ecf5e66f9c33205851fc4 [stream]
+[debug] [2024-05-29T07:28:05.520Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/7f5f1e7787b08cce7e41e2efd7787d5ea05785e2fcaf796a6560a927c4a28e65 200
+[debug] [2024-05-29T07:28:05.520Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/7f5f1e7787b08cce7e41e2efd7787d5ea05785e2fcaf796a6560a927c4a28e65 [stream]
+[debug] [2024-05-29T07:28:05.543Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/42e046c763197ab1e668bdf5ef48faa0fea24489f383e7e8ee1f27cb1711157d 200
+[debug] [2024-05-29T07:28:05.544Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/42e046c763197ab1e668bdf5ef48faa0fea24489f383e7e8ee1f27cb1711157d [stream]
+[debug] [2024-05-29T07:28:05.561Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/c980e223f3b9e865dc681abc6bceeba81717d32eeedbd93a8999803729a99523 200
+[debug] [2024-05-29T07:28:05.561Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/c980e223f3b9e865dc681abc6bceeba81717d32eeedbd93a8999803729a99523 [stream]
+[debug] [2024-05-29T07:28:05.569Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/d85950830ad12c21d9e8b1287ad9770b11f6b5a7784c2e319791cc90d3772376 200
+[debug] [2024-05-29T07:28:05.569Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/d85950830ad12c21d9e8b1287ad9770b11f6b5a7784c2e319791cc90d3772376 [stream]
+[debug] [2024-05-29T07:28:05.570Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/dcc4b816cb90b3055e9d7581e1aebcf23575bdfaf1f9da0a3cbc29e3c7d139fc 200
+[debug] [2024-05-29T07:28:05.570Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/dcc4b816cb90b3055e9d7581e1aebcf23575bdfaf1f9da0a3cbc29e3c7d139fc [stream]
+[debug] [2024-05-29T07:28:05.571Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/100a6032929a01d82d4bb30ea60bff906f126848a08dcec5792ae26bc04167b8 200
+[debug] [2024-05-29T07:28:05.571Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/100a6032929a01d82d4bb30ea60bff906f126848a08dcec5792ae26bc04167b8 [stream]
+[debug] [2024-05-29T07:28:05.572Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/e995cfddfc63798d4cdd419cfae347d67e1e2891eef05ea5647cf6fc20133b99 200
+[debug] [2024-05-29T07:28:05.572Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/e995cfddfc63798d4cdd419cfae347d67e1e2891eef05ea5647cf6fc20133b99 [stream]
+[debug] [2024-05-29T07:28:05.611Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/6ca49cd775819e4cf4603d7a3a4182523526cb7f9b9014c3d24ca48e1c33a5ae 200
+[debug] [2024-05-29T07:28:05.611Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/6ca49cd775819e4cf4603d7a3a4182523526cb7f9b9014c3d24ca48e1c33a5ae [stream]
+[debug] [2024-05-29T07:28:05.620Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/bed386ad5737e18aeb7af67fda59a302c2018df438c90f55b0cca16d75ae5155 200
+[debug] [2024-05-29T07:28:05.620Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/bed386ad5737e18aeb7af67fda59a302c2018df438c90f55b0cca16d75ae5155 [stream]
+[debug] [2024-05-29T07:28:05.622Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/9d6c3f81b40fd4a928f804df8c8185761fcd49adfbf1affb67ce265a6ef11ede 200
+[debug] [2024-05-29T07:28:05.622Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/9d6c3f81b40fd4a928f804df8c8185761fcd49adfbf1affb67ce265a6ef11ede [stream]
+[debug] [2024-05-29T07:28:05.627Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3d3641ad9bda468d50506b0f8986d8c8e335d87e601a0052e672859d5427512c 200
+[debug] [2024-05-29T07:28:05.627Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3d3641ad9bda468d50506b0f8986d8c8e335d87e601a0052e672859d5427512c [stream]
+[debug] [2024-05-29T07:28:05.643Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ad71dcd1ec8f201cf4c852788d67f8a3f54e7b21158c38fa20735933ede293b9 200
+[debug] [2024-05-29T07:28:05.643Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ad71dcd1ec8f201cf4c852788d67f8a3f54e7b21158c38fa20735933ede293b9 [stream]
+[debug] [2024-05-29T07:28:05.647Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ad68ed55ba8af3314fe989686e6a140e6459633a2de9d9392601e6accd1cfc1b 200
+[debug] [2024-05-29T07:28:05.648Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ad68ed55ba8af3314fe989686e6a140e6459633a2de9d9392601e6accd1cfc1b [stream]
+[debug] [2024-05-29T07:28:05.648Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/05190cef6565e4e9f08cafeae8bc8b2763797e3d57dfd7443615ccaae466aa56 200
+[debug] [2024-05-29T07:28:05.649Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/05190cef6565e4e9f08cafeae8bc8b2763797e3d57dfd7443615ccaae466aa56 [stream]
+[debug] [2024-05-29T07:28:05.649Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/abf52b5ff1befca938cae6e7a4d613d57f6021c66ae3c41c26aa98e380b2ec4e 200
+[debug] [2024-05-29T07:28:05.649Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/abf52b5ff1befca938cae6e7a4d613d57f6021c66ae3c41c26aa98e380b2ec4e [stream]
+[debug] [2024-05-29T07:28:05.653Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/b9888d8c49f941283e404b2f45d3cbbab99b8ddfba150e770a3c8c0365ef715e 200
+[debug] [2024-05-29T07:28:05.653Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/b9888d8c49f941283e404b2f45d3cbbab99b8ddfba150e770a3c8c0365ef715e [stream]
+[debug] [2024-05-29T07:28:05.654Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/15b4e6d132d9c6169c3d97c92ee75881d78130e0349a62f736d33a46f7264f7a 200
+[debug] [2024-05-29T07:28:05.654Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/15b4e6d132d9c6169c3d97c92ee75881d78130e0349a62f736d33a46f7264f7a [stream]
+[debug] [2024-05-29T07:28:05.666Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/446d44be69b1c4dc8c42e7d4603314ded5ee86aeaf3d84c7f94e26f11f05c713 200
+[debug] [2024-05-29T07:28:05.666Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/446d44be69b1c4dc8c42e7d4603314ded5ee86aeaf3d84c7f94e26f11f05c713 [stream]
+[debug] [2024-05-29T07:28:05.667Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3dcf52b37a4052d9ca2e8371881b967913b113c2d157dd483a3070528c4d8911 200
+[debug] [2024-05-29T07:28:05.667Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3dcf52b37a4052d9ca2e8371881b967913b113c2d157dd483a3070528c4d8911 [stream]
+[debug] [2024-05-29T07:28:05.674Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/988968c883c164861febb3470f0518d13ed7fca1167f0950b679c26a56ddae2c 200
+[debug] [2024-05-29T07:28:05.674Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/988968c883c164861febb3470f0518d13ed7fca1167f0950b679c26a56ddae2c [stream]
+[debug] [2024-05-29T07:28:05.682Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3c3378193f4367aae07dfe8560d525155d2b47c23c111cbce0b04fc639860735 200
+[debug] [2024-05-29T07:28:05.682Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3c3378193f4367aae07dfe8560d525155d2b47c23c111cbce0b04fc639860735 [stream]
+[debug] [2024-05-29T07:28:05.690Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/69fb75aede79b670cc3a774cf34561364d373632c78ed59342781868b751d105 200
+[debug] [2024-05-29T07:28:05.690Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/69fb75aede79b670cc3a774cf34561364d373632c78ed59342781868b751d105 [stream]
+[debug] [2024-05-29T07:28:05.693Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/d8d8790f4e673a23bec506f00699bed8a258ac0e4965bb1ca8598172cfc0ec97 200
+[debug] [2024-05-29T07:28:05.693Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/d8d8790f4e673a23bec506f00699bed8a258ac0e4965bb1ca8598172cfc0ec97 [stream]
+[debug] [2024-05-29T07:28:05.709Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0caf6f001b398d5979274a6af5658b362a75adc2197e0910bc196d95e42a157d 200
+[debug] [2024-05-29T07:28:05.710Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0caf6f001b398d5979274a6af5658b362a75adc2197e0910bc196d95e42a157d [stream]
+[debug] [2024-05-29T07:28:05.734Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/8db1b0e81eefb890c3f716294bd6d44c52e9788252567edaa0428fdcea1b3e23 200
+[debug] [2024-05-29T07:28:05.734Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/8db1b0e81eefb890c3f716294bd6d44c52e9788252567edaa0428fdcea1b3e23 [stream]
+[debug] [2024-05-29T07:28:05.744Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0e002dea937ff2f4e3a98276c521c265ebac6f21c3050fc1de6d7d2b540ddd37 200
+[debug] [2024-05-29T07:28:05.744Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0e002dea937ff2f4e3a98276c521c265ebac6f21c3050fc1de6d7d2b540ddd37 [stream]
+[debug] [2024-05-29T07:28:05.745Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3a0ddd42f9af0b423326f4827681009e97014139de975d7aabd4aca5981918c5 200
+[debug] [2024-05-29T07:28:05.745Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3a0ddd42f9af0b423326f4827681009e97014139de975d7aabd4aca5981918c5 [stream]
+[debug] [2024-05-29T07:28:05.751Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ea073e630695ab3581f25d236d6588c709d34fe1a8e4a400060363c1ef1ebade 200
+[debug] [2024-05-29T07:28:05.751Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/ea073e630695ab3581f25d236d6588c709d34fe1a8e4a400060363c1ef1ebade [stream]
+[debug] [2024-05-29T07:28:05.755Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/8e9ca5307d8bca3d8d68b6c92b576b995fe298e03bd28a48a1c70626e96586c7 200
+[debug] [2024-05-29T07:28:05.755Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/8e9ca5307d8bca3d8d68b6c92b576b995fe298e03bd28a48a1c70626e96586c7 [stream]
+[debug] [2024-05-29T07:28:05.769Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0ffbd3fe28ed61d680609ffd164df13b8e6073b7708286fd1a84c5d8020083fa 200
+[debug] [2024-05-29T07:28:05.769Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/0ffbd3fe28ed61d680609ffd164df13b8e6073b7708286fd1a84c5d8020083fa [stream]
+[debug] [2024-05-29T07:28:05.819Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/66abb6c1635e7930a3da7b01f531d21fa8b7e1c93edbe971c193c52b2f5984dc 200
+[debug] [2024-05-29T07:28:05.819Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/66abb6c1635e7930a3da7b01f531d21fa8b7e1c93edbe971c193c52b2f5984dc [stream]
+[debug] [2024-05-29T07:28:05.834Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/476da6a08fbaa063b66ea398321c06ea79208d117decd234509752475a3b67c6 200
+[debug] [2024-05-29T07:28:05.834Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/476da6a08fbaa063b66ea398321c06ea79208d117decd234509752475a3b67c6 [stream]
+[debug] [2024-05-29T07:28:05.835Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/5564685f42fc0adae0ba49be2e5b4ab7d6b7ed4ed9624ca480dd609a6546c3c4 200
+[debug] [2024-05-29T07:28:05.835Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/5564685f42fc0adae0ba49be2e5b4ab7d6b7ed4ed9624ca480dd609a6546c3c4 [stream]
+[debug] [2024-05-29T07:28:05.841Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/56529d5c05555c7bd45b85b6ad14f98f64d975e95b5c7c4f52a4b4cd812e816e 200
+[debug] [2024-05-29T07:28:05.841Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/56529d5c05555c7bd45b85b6ad14f98f64d975e95b5c7c4f52a4b4cd812e816e [stream]
+[debug] [2024-05-29T07:28:05.844Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/cb1a490b23c359aed86c4020f4bfe33966d79023f89d88adf20ee02361d3ff41 200
+[debug] [2024-05-29T07:28:05.844Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/cb1a490b23c359aed86c4020f4bfe33966d79023f89d88adf20ee02361d3ff41 [stream]
+[debug] [2024-05-29T07:28:05.858Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/a1ba2df63daa75b8799df9d04aefa19eede1e98ff2192b0e867a2ecd6c2cc09c 200
+[debug] [2024-05-29T07:28:05.859Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/a1ba2df63daa75b8799df9d04aefa19eede1e98ff2192b0e867a2ecd6c2cc09c [stream]
+[debug] [2024-05-29T07:28:05.914Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4b1e511eef75c8e05575cf1862e6931f23b4e5d3b5f4d2b1621a4c0458f2a8da 200
+[debug] [2024-05-29T07:28:05.914Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4b1e511eef75c8e05575cf1862e6931f23b4e5d3b5f4d2b1621a4c0458f2a8da [stream]
+[debug] [2024-05-29T07:28:05.939Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3089ed3742291279e585ed48367a4dd4274483cdfeeb7df27bd5c991558b6215 200
+[debug] [2024-05-29T07:28:05.939Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/3089ed3742291279e585ed48367a4dd4274483cdfeeb7df27bd5c991558b6215 [stream]
+[debug] [2024-05-29T07:28:06.002Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4856e6b80127358bc82c45baa6e77eafaa17225926f6d8affef54c19a588ff7f 200
+[debug] [2024-05-29T07:28:06.002Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/4856e6b80127358bc82c45baa6e77eafaa17225926f6d8affef54c19a588ff7f [stream]
+[debug] [2024-05-29T07:28:06.003Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/2ce4cdc44a6f040124eb5bee8c723c13174f928cb1a26ee6232676b32efb1a1d 200
+[debug] [2024-05-29T07:28:06.003Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/2ce4cdc44a6f040124eb5bee8c723c13174f928cb1a26ee6232676b32efb1a1d [stream]
+[debug] [2024-05-29T07:28:06.131Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/79a516511886e9b32389a82c400b1c07a9f9c5e21d09d29a83049391729fdba9 200
+[debug] [2024-05-29T07:28:06.131Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/79a516511886e9b32389a82c400b1c07a9f9c5e21d09d29a83049391729fdba9 [stream]
+[debug] [2024-05-29T07:28:06.285Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/78a108229ed6589fa4b36be0328313431198fd0e6b9cf62374d01daf877337c9 200
+[debug] [2024-05-29T07:28:06.288Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/78a108229ed6589fa4b36be0328313431198fd0e6b9cf62374d01daf877337c9 [stream]
+[debug] [2024-05-29T07:28:06.289Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/057927e86f77e3f3f1adff7b3adc305201c3a87b013ad1c4af1dab9c847583a3 200
+[debug] [2024-05-29T07:28:06.292Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/057927e86f77e3f3f1adff7b3adc305201c3a87b013ad1c4af1dab9c847583a3 [stream]
+[debug] [2024-05-29T07:28:06.450Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/03e5435e024842bd207e33955bb431e3bfa19457ac1e136c31297746c3ca05e7 200
+[debug] [2024-05-29T07:28:06.450Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/03e5435e024842bd207e33955bb431e3bfa19457ac1e136c31297746c3ca05e7 [stream]
+[debug] [2024-05-29T07:28:06.631Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/2b068f8bc9ec177a8730cce518186badb1c41fb6dcfa1d0d145cc40875bf53c2 200
+[debug] [2024-05-29T07:28:06.632Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/rich-kevan/versions/5eab2b54f3b1cd5e/files/2b068f8bc9ec177a8730cce518186badb1c41fb6dcfa1d0d145cc40875bf53c2 [stream]
+[debug] [2024-05-29T07:28:06.632Z] [hosting][upload queue][FINAL] {"max":2078,"min":864,"avg":1188.0000000000002,"active":0,"complete":52,"success":52,"errored":0,"retried":0,"total":52,"elapsed":2091}
+[info] ✔  hosting[rich-kevan]: file upload complete 
+[debug] [2024-05-29T07:28:06.633Z] [hosting] deploy completed after 3537ms
+[info] i  functions: creating Node.js 18 (2nd Gen) function firebase-frameworks-rich-kevan:ssrrichkevan(us-west1)... 
+[debug] [2024-05-29T07:28:06.644Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/us-west1/functions functionId=ssrrichkevan
+[debug] [2024-05-29T07:28:06.644Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/us-west1/functions {"name":"projects/rich-kevan/locations/us-west1/functions/ssrrichkevan","buildConfig":{"runtime":"nodejs18","entryPoint":"ssrrichkevan","source":{"storageSource":{"bucket":"gcf-v2-uploads-309886706198-us-west1","object":"32d01d20-b0e0-4910-9e5d-15a6cffc0e16.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"NEXT_PUBLIC_SITE_URL":"https://richkevan.com","VERCEL_URL":"rich-kevan--testing-2ljht4i0.web.app","__FIREBASE_FRAMEWORKS_ENTRY__":"next.js","FIREBASE_CONFIG":"{\"projectId\":\"rich-kevan\",\"storageBucket\":\"rich-kevan.appspot.com\",\"locationId\":\"us-central\"}","GCLOUD_PROJECT":"rich-kevan","EVENTARC_CLOUD_EVENT_SOURCE":"projects/rich-kevan/locations/us-west1/services/ssrrichkevan","FUNCTION_TARGET":"ssrrichkevan"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase--project-idx","firebase-functions-codebase":"firebase-frameworks-rich-kevan","firebase-functions-hash":"29042c2e88f1945f08459bdd93596f89dab6191e"}}
+[debug] [2024-05-29T07:28:07.276Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/us-west1/functions 404
+[debug] [2024-05-29T07:28:07.276Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/rich-kevan/locations/us-west1/functions {"error":{"code":404,"message":"Service account projects/-/serviceAccounts/309886706198-compute@developer.gserviceaccount.com was not found.","status":"NOT_FOUND"}}
+[warn] ⚠  functions: HTTP Error: 404, Service account projects/-/serviceAccounts/309886706198-compute@developer.gserviceaccount.com was not found. 
+[warn] ⚠  functions:  failed to create function projects/rich-kevan/locations/us-west1/functions/ssrrichkevan 
+[error] Failed to create function projects/rich-kevan/locations/us-west1/functions/ssrrichkevan
+[debug] [2024-05-29T07:28:07.300Z] Total Function Deployment time: 652
+[debug] [2024-05-29T07:28:07.300Z] 1 Functions Deployed
+[debug] [2024-05-29T07:28:07.300Z] 1 Functions Errored
+[debug] [2024-05-29T07:28:07.300Z] 0 Function Deployments Aborted
+[debug] [2024-05-29T07:28:07.300Z] Average Function Deployment time: 651
+[info] 
+[info] Functions deploy had errors with the following functions:
+	firebase-frameworks-rich-kevan:ssrrichkevan(us-west1)
+[debug] [2024-05-29T07:28:07.348Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2024-05-29T07:28:07.354Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/rich-kevan/locations/us-west1/repositories/gcf-artifacts/packages/ssrrichkevan [none]
+[debug] [2024-05-29T07:28:07.358Z] >>> [apiv2][query] GET https://us.gcr.io/v2/rich-kevan/gcf/us-west1/tags/list [none]
+[debug] [2024-05-29T07:28:07.442Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/rich-kevan/locations/us-west1/repositories/gcf-artifacts/packages/ssrrichkevan 404
+[debug] [2024-05-29T07:28:07.442Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/rich-kevan/locations/us-west1/repositories/gcf-artifacts/packages/ssrrichkevan {"error":{"code":404,"message":"Package \"projects/rich-kevan/locations/us-west1/repositories/gcf-artifacts/packages/ssrrichkevan\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-05-29T07:28:07.532Z] <<< [apiv2][status] GET https://us.gcr.io/v2/rich-kevan/gcf/us-west1/tags/list 200
+[debug] [2024-05-29T07:28:07.532Z] <<< [apiv2][body] GET https://us.gcr.io/v2/rich-kevan/gcf/us-west1/tags/list {"child":[],"manifest":{},"name":"rich-kevan/gcf/us-west1","tags":[]}
+[debug] [2024-05-29T07:28:07.533Z] Could not find image for function projects/rich-kevan/locations/us-west1/functions/ssrrichkevan
+[debug] [2024-05-29T07:28:07.533Z] Functions deploy failed.
+[debug] [2024-05-29T07:28:07.533Z] {
+  "endpoint": {
+    "id": "ssrrichkevan",
+    "project": "rich-kevan",
+    "region": "us-west1",
+    "entryPoint": "ssrrichkevan",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase--project-idx"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "NEXT_PUBLIC_SITE_URL": "https://richkevan.com",
+      "VERCEL_URL": "rich-kevan--testing-2ljht4i0.web.app",
+      "__FIREBASE_FRAMEWORKS_ENTRY__": "next.js",
+      "FIREBASE_CONFIG": "{\"projectId\":\"rich-kevan\",\"storageBucket\":\"rich-kevan.appspot.com\",\"locationId\":\"us-central\"}",
+      "GCLOUD_PROJECT": "rich-kevan",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/rich-kevan/locations/us-west1/services/ssrrichkevan"
+    },
+    "codebase": "firebase-frameworks-rich-kevan",
+    "cpu": 1,
+    "targetedByOnly": true,
+    "hash": "29042c2e88f1945f08459bdd93596f89dab6191e"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/rich-kevan/locations/us-west1/functions/ssrrichkevan"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/rich-kevan/locations/us-west1/functions/ssrrichkevan",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 404,
+            "message": "Service account projects/-/serviceAccounts/309886706198-compute@developer.gserviceaccount.com was not found.",
+            "status": "NOT_FOUND"
+          }
+        },
+        "response": {
+          "statusCode": 404
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 404, Service account projects/-/serviceAccounts/309886706198-compute@developer.gserviceaccount.com was not found.",
+      "status": 404
+    },
+    "status": 404,
+    "code": 404
+  }
+}
+[debug] [2024-05-29T07:28:07.556Z] Error: Failed to create function ssrrichkevan in region us-west1
+    at /nix/store/cgci1g1m5rzdxbwnl9lgzfyfc2lkynd4-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (/nix/store/cgci1g1m5rzdxbwnl9lgzfyfc2lkynd4-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:278:30)
+    at async Fabricator.createEndpoint (/nix/store/cgci1g1m5rzdxbwnl9lgzfyfc2lkynd4-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:137:13)
+    at async handle (/nix/store/cgci1g1m5rzdxbwnl9lgzfyfc2lkynd4-firebase-tools-13.9.0/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
