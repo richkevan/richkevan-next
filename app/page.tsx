@@ -1,16 +1,9 @@
 import Image, { type ImageProps } from 'next/image'
-import Link from 'next/link'
 import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  GitHubIcon,
-  InstagramIcon,
-  LinkedInIcon,
-  XIcon,
-} from '@/components/SocialIcons'
 
 import logoCodePlatoon from '@/images/logos/codeplatoon.svg'
 import logoInstantTeams from '@/images/logos/instantteams.svg'
@@ -23,6 +16,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import { subscribe } from '@/app/actions'
+import SocialHorizontal from '@/components/SocialHorizontal'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -95,19 +89,6 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
-  )
-}
-
-function SocialLink({
-  icon: Icon,
-  ...props
-}: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>
-}) {
-  return (
-    <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-    </Link>
   )
 }
 
@@ -286,24 +267,7 @@ export default async function Home() {
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           I'm Rich, a software engineer passionate about building innovative solutions and a dedicated coding educator committed to empowering the next generation of developers. Based in the San Francisco Bay Area, I thrive on the intersection of these two worlds, leveraging my technical expertise to solve real-world problems and sharing my knowledge to guide aspiring programmers on their coding journeys.
           </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink href="https://x.com/intent/follow?screen_name=richkevan" aria-label="Follow on X" icon={XIcon} />
-            <SocialLink
-              href="https://www.instagram.com/rich.kevan/"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com/richkevan"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/rich-kevan/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-          </div>
+          <SocialHorizontal />
         </div>
       </Container>
       <Photos />
