@@ -1,5 +1,6 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
+import { app, analytics } from '@/lib/firebase/firebase'
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
