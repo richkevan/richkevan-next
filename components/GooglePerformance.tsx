@@ -1,7 +1,8 @@
 "use client"
 
 import { useEffect } from "react"
-import { analytics } from "@/lib/firebase/firebase"
+import { performance } from "@/lib/firebase/firebase"
+
 
 
 
@@ -9,7 +10,7 @@ import { analytics } from "@/lib/firebase/firebase"
 export default function GoogleAnalytics() {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      analytics
+      performance
     }
     return
   }, [])
