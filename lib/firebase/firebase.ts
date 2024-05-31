@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
+import { getPerformance } from "firebase/performance";
 
 
 // Your web app's Firebase configuration
@@ -17,5 +18,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = isSupported().then((supported) => supported ? getAnalytics(app): null);
+const performance = getPerformance(app);
 
-export { app, analytics };
+
+export { app, analytics, performance };
