@@ -1,12 +1,8 @@
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
-import { app, analytics } from '@/lib/firebase/firebase'
-import { useEffect } from 'react'
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    analytics;
-  }, [])
   
   return (
     <>
