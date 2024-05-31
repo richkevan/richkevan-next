@@ -9,7 +9,8 @@
     "lint": "next lint",
     "firebase-login": "firebase login",
     "firebase-init": "firebase init",
-    "staging": "firebase hosting:channel:deploy staging"
+    "staging": "firebase hosting:channel:deploy staging",
+    "prod-deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
     "@headlessui/react": "^2.0.1",

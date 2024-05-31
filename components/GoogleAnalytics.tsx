@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import { analytics } from "@/lib/firebase/firebase"
+import { firebaseAnalytics as analytics } from "@/lib/firebase/firebase"
 
 
 

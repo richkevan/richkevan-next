@@ -1,16 +1,15 @@
 "use client"
 
 import { useEffect } from "react"
-import { performance } from "@/lib/firebase/firebase"
+import { firebasePerformance } from "@/lib/firebase/firebase"
 
 
 
 
-
-export default function GoogleAnalytics() {
+export default function GooglePerformance() {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      performance
+      firebasePerformance
     }
     return
   }, [])
