@@ -17,6 +17,8 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
+
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -271,6 +273,8 @@ export function Header() {
   let headerRef = useRef<React.ElementRef<'div'>>(null)
   let avatarRef = useRef<React.ElementRef<'div'>>(null)
   let isInitial = useRef(true)
+
+  GoogleAnalytics()
 
   useEffect(() => {
     let downDelay = avatarRef.current?.offsetTop ?? 0
