@@ -1,17 +1,16 @@
 import Image, { type ImageProps } from 'next/image'
 import clsx from 'clsx'
-
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import logoCodePlatoon from '@/images/logos/codeplatoon.svg'
 import logoInstantTeams from '@/images/logos/instantteams.svg'
 import logoBayside from '@/images/logos/bayside.svg'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import image1 from '@/images/photos/image-1.avif'
+import image2 from '@/images/photos/image-2.avif'
+import image3 from '@/images/photos/image-3.avif'
+import image4 from '@/images/photos/image-4.avif'
+import image5 from '@/images/photos/image-5.avif'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import { subscribe } from '@/app/actions'
@@ -245,6 +244,7 @@ function Photos() {
               alt=""
               sizes="(min-width: 640px) 18rem, 11rem"
               className="absolute inset-0 h-full w-full object-cover"
+              priority
             />
           </div>
         ))}
