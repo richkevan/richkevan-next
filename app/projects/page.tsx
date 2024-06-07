@@ -74,10 +74,10 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <SimpleLayout
+   <SimpleLayout
       title="Where Dreams Meet Code: My Most Ambitious Projects to Date!"
       intro="I'm a bit of a project hoarder, with a collection of coding experiments and half-finished creations hidden away in digital drawers. But amidst the dust, there are some real gems! Here are a few of the projects I'm most proud of (or at least, the ones I've made the most progress on). If you're curious to see more, check out my GitHub."
-    >
+    > 
       <ul
         role="list"
         className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
