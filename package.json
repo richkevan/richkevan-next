@@ -24,13 +24,13 @@
     "cheerio": "^1.0.0-rc.12",
     "clsx": "^2.1.0",
     "fast-glob": "^3.2.11",
-    "feed": "^4.2.2",
     "firebase": "^10.12.2",
     "next": "14.3.0-canary.9",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^4.0.0",
+    "rss": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "^20",
