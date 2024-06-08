@@ -1,8 +1,5 @@
 import { type Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
-import clsx from 'clsx'
-
 import { Container } from '@/components/Container'
 import SocialLink from '@/components/SocialLink'
 import { MailIcon } from '@/components/SocialIcons'
@@ -14,7 +11,7 @@ import SocialVertical from '@/components/SocialVertical'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    'I’m Rich Kevan. I live in the SF Bay Area, where I design the future.',
 }
 
 export default function About() {

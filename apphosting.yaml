@@ -1,0 +1,30 @@
+# Settings for Cloud Run
+runConfig:
+  minInstances: 1
+  maxInstances: 10
+  concurrency: 100
+  cpu: 1
+  memoryMiB: 512
+
+# Environment variables and secrets
+env:
+  - variable: NEXT_PUBLIC_FIREBASE_APIKEY
+    secret: firebase_apikey
+
+  - variable: NEXT_PUBLIC_FIREBASE_AUTHDOMAIN
+    secret: firebase_authdomain
+
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECTID
+    secret: firebase_projectid
+
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGEBUCKET
+    secret: mybucket.appspot.com
+
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID
+    secret: messaging.sender.id
+
+  - variable: NEXT_PUBLIC_FIREBASE_APPID
+    secret: app.id
+
+  - variable: NEXT_PUBLIC_FIREBASE_MEASUREMENTID
+    secret: measurement.id
