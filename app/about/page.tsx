@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import SocialLink from '@/components/SocialLink'
 import { MailIcon } from '@/components/SocialIcons'
-import portraitImage from '@/images/portrait.jpg'
+import portraitImage from '@/images/portrait.avif'
 import SocialVertical from '@/components/SocialVertical'
 
 
@@ -28,6 +28,7 @@ export default function About() {
               alt=""
               sizes="(min-width: 1024px) 32rem, 20rem"
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              priority
             />
           </div>
         </div>
@@ -50,14 +51,16 @@ export default function About() {
             </p>
           </div>
         </div>
-        <SocialVertical className="lg:pl-20"/>
-        <SocialLink
-        href="mailto:hey@richkevan.com"
-        icon={MailIcon}
-        className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-      >
-        hey@richkevan.com
-      </SocialLink>
+        <SocialVertical className="lg:pl-20">
+          <SocialLink
+          href="mailto:hey@richkevan.com"
+          icon={MailIcon}
+          className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
+          >
+            hey@richkevan.com
+          </SocialLink>
+        </SocialVertical>
+        
       </div>
     </Container>
   )

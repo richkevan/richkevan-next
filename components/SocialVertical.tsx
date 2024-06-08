@@ -1,3 +1,4 @@
+import { Children } from "react"
 import { XIcon, InstagramIcon, GitHubIcon, LinkedInIcon } from "./SocialIcons"
 import SocialLink from "./SocialLink"
 
@@ -28,7 +29,7 @@ export default function SocialVertical(props: React.ComponentPropsWithoutRef<'di
         icon={LinkedInIcon} className="mt-4">
         Follow on LinkedIn
       </SocialLink>
-      
+      {props.children}
     </ul>
   </div>
   )
