@@ -9,6 +9,22 @@
     "frameworksBackend": {
       "region": "us-west1",
       "memory": "512MiB"
-    }
+    },
+    "headers": {
+      "source": "robots.txt",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    "redirects": [
+      {
+        "source": "/blog",
+        "destination": "/articles",
+        "type": 301
+      }
+    ]
   }
 }
