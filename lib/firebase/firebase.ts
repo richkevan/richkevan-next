@@ -16,9 +16,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
-const firebaseAnalytics = isSupported().then((supported) => supported ? getAnalytics(firebaseApp): null);
-const firebasePerformance = isSupported().then((supported) => supported ? getPerformance(firebaseApp): null);
+const firebaseApp = await initializeApp(firebaseConfig);
+const firebaseAnalytics = await isSupported().then((supported) => supported ? getAnalytics(firebaseApp): null);
+const firebasePerformance = await isSupported().then((supported) => supported ? getPerformance(firebaseApp): null);
 
 
 export { firebaseApp, firebaseAnalytics, firebasePerformance };
