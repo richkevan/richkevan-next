@@ -1,3 +1,4 @@
+
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
 import { getPerformance } from "firebase/performance";
@@ -16,9 +17,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = await initializeApp(firebaseConfig);
-const firebaseAnalytics = await isSupported().then((supported) => supported ? getAnalytics(firebaseApp): null);
-const firebasePerformance = await isSupported().then((supported) => supported ? getPerformance(firebaseApp): null);
+const firebaseApp = initializeApp(firebaseConfig);
+const firebaseAnalytics = isSupported().then((supported) => supported ? getAnalytics(firebaseApp): null);
+const firebasePerformance = isSupported().then((supported) => supported ? getPerformance(firebaseApp): null);
 
 
 export { firebaseApp, firebaseAnalytics, firebasePerformance };
