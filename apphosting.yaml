@@ -18,13 +18,13 @@ env:
     secret: firebase_projectid
 
   - variable: NEXT_PUBLIC_FIREBASE_STORAGEBUCKET
-    secret: mybucket.appspot.com
+    secret: firebase_storagebucket
 
   - variable: NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID
-    secret: messaging.sender.id
+    secret: firebase_messagingsenderid
 
   - variable: NEXT_PUBLIC_FIREBASE_APPID
-    secret: app.id
+    secret: firebase_appid
 
   - variable: NEXT_PUBLIC_FIREBASE_MEASUREMENTID
-    secret: measurement.id
+    secret: firebase_measurementid
