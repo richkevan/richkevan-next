@@ -15,6 +15,9 @@ import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import { subscribe } from '@/app/actions'
 import SocialHorizontal from '@/components/SocialHorizontal'
+import { firebaseAnalytics } from '@/lib/firebase/firebase'
+import { logEvent, Analytics } from 'firebase/analytics'
+import Link from 'next/link'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -206,6 +209,12 @@ function Resume() {
     },
   ]
 
+  const analyticsResumeEvent = () => {
+      logEvent(firebaseAnalytics!, 'download_resume')
+  }
+
+
+
   return (
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
@@ -217,8 +226,14 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="/RichKevan.pdf" target='blank' variant="secondary" className="group mt-6 w-full">
-        Download CV
+      <Button 
+      href="/RichKevan.pdf" 
+      target='blank'
+      variant="secondary" 
+      className="group mt-6 w-full"
+      onClick={analyticsResumeEvent}
+      >
+        Download Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
