@@ -80,14 +80,14 @@ export default async function ArticlePage({
   intro={article.post.subtitle}
   >
     <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-    {/* <Image 
+    <Image 
     src={article.post.coverImage.url || "https://picsum.photos/1200/630"} 
     alt={article.post.title}
     width={1200}
     height={630}
     priority={true}
     className="rounded-lg"
-    /> */}
+    />
     <span className=" prose dark:prose-invert">
       {parse(article.post.content.html)}
     </span>
