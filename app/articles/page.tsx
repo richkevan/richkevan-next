@@ -3,9 +3,10 @@ import { type Metadata } from 'next'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { getAllArticles as Hashnode, HashnodeArticle } from '@/lib/hashnode'
 import { formatDate } from '@/lib/formatDate'
 
-function Article({ article }: { article: ArticleWithSlug }) {
+function Article({ article }: { article: HashnodeArticle }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
@@ -20,7 +21,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
         >
           {formatDate(article.date)}
         </Card.Eyebrow>
-        <Card.Description>{article.description}</Card.Description>
+        <Card.Description>{article.brief}</Card.Description>
         <Card.Cta>Read article</Card.Cta>
       </Card>
       <Card.Eyebrow
@@ -41,7 +42,10 @@ export const metadata: Metadata = {
 }
 
 export default async function ArticlesIndex() {
-  let articles = await getAllArticles()
+  // let articles = await getAllArticles()
+  let articles = await Hashnode()
+  console.log(articles)
+  
 
   return (
     <SimpleLayout
@@ -50,7 +54,7 @@ export default async function ArticlesIndex() {
     >
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         <div className="flex max-w-3xl flex-col space-y-16">
-          {articles.map((article) => (
+          {articles.map((article: HashnodeArticle) => (
             <Article key={article.slug} article={article} />
           ))}
         </div>
