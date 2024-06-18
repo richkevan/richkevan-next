@@ -10,7 +10,7 @@ import image3 from '@/images/photos/image-3.avif'
 import image4 from '@/images/photos/image-4.avif'
 import image5 from '@/images/photos/image-5.avif'
 import { MailIconRound } from '@/components/SocialIcons'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import { getAllArticles as Hashnode, HashnodeArticle } from '@/lib/hashnode'
 import { formatDate } from '@/lib/formatDate'
 import { subscribe } from '@/app/actions'
 import SocialHorizontal from '@/components/SocialHorizontal'
@@ -18,7 +18,7 @@ import { Resume } from '@/components/Resume'
 
 
 
-function Article({ article }: { article: ArticleWithSlug }) {
+function Article({ article }: { article: HashnodeArticle }) {
   return (
     <Card as="article">
       <Card.Title href={`/articles/${article.slug}`}>
@@ -27,19 +27,15 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
+      <Card.Description>{article.brief}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
   )
 }
 
 function Newsletter() {
-  async function newsletterSubscription(formData: FormData) {
-    'use server'
-
-    const email = formData.get('email')
-    console.log(email)
-  }
+  
+  
   return (
     <form
       action={subscribe}
@@ -102,7 +98,7 @@ function Photos() {
 }
 
 export default async function Home() {
-  let articles = (await getAllArticles()).slice(0, 4)
+  let articles = (await Hashnode()).slice(0, 4)
 
   return (
     <>
@@ -127,7 +123,7 @@ export default async function Home() {
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
+            {articles.map((article: HashnodeArticle) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
