@@ -5,7 +5,7 @@ import parse from 'html-react-parser'
 
 
 
-export async function getStaticPaths() {
+async function getStaticPaths() {
   const articles = await Hashnode()
 
   const paths = articles.map((article: HashnodeArticle) => ({

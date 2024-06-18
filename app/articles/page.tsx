@@ -2,7 +2,6 @@ import { type Metadata } from 'next'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { getAllArticles as Hashnode, HashnodeArticle } from '@/lib/hashnode'
 import { formatDate } from '@/lib/formatDate'
 
