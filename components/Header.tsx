@@ -14,11 +14,9 @@ import {
   TransitionChild,
 } from '@headlessui/react'
 import clsx from 'clsx'
-
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.avif'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -276,7 +274,6 @@ export function Header() {
   let avatarRef = useRef<React.ElementRef<'div'>>(null)
   let isInitial = useRef(true)
 
-  GoogleAnalytics()
 
   useEffect(() => {
     let downDelay = avatarRef.current?.offsetTop ?? 0
@@ -387,6 +384,7 @@ export function Header() {
           marginBottom: 'var(--header-mb)',
         }}
       >
+        <GoogleAnalytics gaId="G-41HY4SH6D4" />
         {isHomePage && (
           <>
             <div

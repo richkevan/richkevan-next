@@ -7,8 +7,6 @@ import logoBayside from '@/images/logos/bayside.svg'
 import { ImageProps } from 'next/image'
 import { BriefcaseIcon, ArrowDownIcon } from '@/components/WebIcons'
 import { Button } from '@/components/Button'
-import { firebaseAnalytics } from '@/lib/firebase/firebase'
-import { logEvent } from 'firebase/analytics'
 
 interface Role {
   company: string
