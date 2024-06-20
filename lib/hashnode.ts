@@ -59,7 +59,6 @@ async function fetchArticles() {
 
 export async function getAllArticles() {
   const articles = await fetchArticles()
-  console.log("lib/hashnode.ts: getAllArticles",articles.data.publication.posts.edges)
   return articles.data.publication.posts.edges.map((article: any) => ({
     title: article.node.title,
     brief: article.node.brief,
