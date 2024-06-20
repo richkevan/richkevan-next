@@ -41,9 +41,7 @@ export const metadata: Metadata = {
 }
 
 export default async function ArticlesIndex() {
-  // let articles = await getAllArticles()
   let articles = await Hashnode()
-  console.log(articles)
   
 
   return (
