@@ -1,4 +1,5 @@
-import Image, { type ImageProps } from 'next/image'
+import { type Metadata } from 'next'
+import Image from 'next/image'
 import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
@@ -95,6 +96,11 @@ function Photos() {
       </div>
     </div>
   )
+}
+
+export const metadata: Metadata = {
+  title: 'Rich Kevan',
+  description: 'Software Engineer | Developer Educator | Building brighter futures, one line of code & lesson at a time.',
 }
 
 export default async function Home() {
