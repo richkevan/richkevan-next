@@ -7,8 +7,6 @@ import logoBayside from '@/images/logos/bayside.svg'
 import { ImageProps } from 'next/image'
 import { BriefcaseIcon, ArrowDownIcon } from '@/components/WebIcons'
 import { Button } from '@/components/Button'
-import { firebaseAnalytics } from '@/lib/firebase/firebase'
-import { logEvent } from 'firebase/analytics'
 
 interface Role {
   company: string
@@ -90,12 +88,6 @@ export function Resume() {
     },
   ]
 
-  const analyticsResumeEvent = () => {
-    firebaseAnalytics.then((analytics) => {
-      logEvent(analytics!, 'resume_download')
-    })
-  }
-
 
 
   return (
@@ -114,7 +106,6 @@ export function Resume() {
       target='blank'
       variant="secondary" 
       className="group mt-6 w-full"
-      onClick={analyticsResumeEvent}
       >
         Download Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
