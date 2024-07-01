@@ -18,6 +18,7 @@ import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.avif'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
+
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
@@ -273,7 +274,6 @@ export function Header() {
   let headerRef = useRef<React.ElementRef<'div'>>(null)
   let avatarRef = useRef<React.ElementRef<'div'>>(null)
   let isInitial = useRef(true)
-
 
   useEffect(() => {
     let downDelay = avatarRef.current?.offsetTop ?? 0

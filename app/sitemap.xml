@@ -4,49 +4,55 @@
 
   <url>
        <loc>https://richkevan.com/</loc>
-       <lastmod>2024-06-07T18:23:48+00:00</lastmod>
+       <lastmod>2024-06-30T18:23:48+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
   <url>
        <loc>https://richkevan.com/about</loc>
-       <lastmod>2024-06-07T18:23:48+00:00</lastmod>
+       <lastmod>2024-06-30T18:23:48+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://richkevan.com/articles</loc>
-       <lastmod>2024-06-07T18:23:48+00:00</lastmod>
+       <lastmod>2024-06-30T18:23:48+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://richkevan.com/projects</loc>
-       <lastmod>2024-06-07T18:23:48+00:00</lastmod>
+       <lastmod>2024-06-30T18:23:48+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://richkevan.com/uses</loc>
-       <lastmod>2024-06-07T18:23:48+00:00</lastmod>
+       <lastmod>2024-06-30T18:23:48+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://richkevan.com/learning</loc>
+       <lastmod>2024-06-30T18:23:48+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://richkevan.com/contact</loc>
-       <lastmod>2024-06-07T18:23:48+00:00</lastmod>
+       <lastmod>2024-06-30T18:23:48+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://richkevan.com/articles/rewriting-and-redefining-the-resume-with-ai</loc>
-       <lastmod>2024-06-07T18:33:21+00:00</lastmod>
+       <lastmod>2024-06-30T18:33:21+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
   <url>
        <loc>https://richkevan.com/RichKevan.pdf</loc>
-       <lastmod>2024-06-07T18:23:48+00:00</lastmod>
+       <lastmod>2024-06-30T18:23:48+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
