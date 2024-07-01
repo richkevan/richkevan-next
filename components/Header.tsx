@@ -14,10 +14,9 @@ import {
   TransitionChild,
 } from '@headlessui/react'
 import clsx from 'clsx'
-
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.avif'
-import { GoogleTagManager } from "@next/third-parties/google"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -385,6 +384,7 @@ export function Header() {
           marginBottom: 'var(--header-mb)',
         }}
       >
+        <GoogleAnalytics gaId="G-41HY4SH6D4" />
         {isHomePage && (
           <>
             <div
