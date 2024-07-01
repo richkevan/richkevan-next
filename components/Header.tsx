@@ -384,7 +384,7 @@ export function Header() {
           marginBottom: 'var(--header-mb)',
         }}
       >
-        <GoogleAnalytics gaId="G-41HY4SH6D4" />
+        <GoogleAnalytics gaId="G-Z122EQXH52" />
         {isHomePage && (
           <>
             <div
