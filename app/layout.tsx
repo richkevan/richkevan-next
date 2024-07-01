@@ -2,6 +2,7 @@ import { type Metadata } from 'next'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 import '@/styles/tailwind.css'
 
@@ -9,10 +10,10 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Rich Kevan',
     default:
-      'Rich Kevan- Dreamer, Designer, Developer',
+      'Rich Kevan- Software Engineer | Developer Educator',
   },
   description:
-    "I'm Rich, a software engineer passionate about building innovative solutions and a dedicated coding educator committed to empowering the next generation of developers. Based in the San Francisco Bay Area, I thrive on the intersection of these two worlds, leveraging my technical expertise to solve real-world problems and sharing my knowledge to guide aspiring programmers on their coding journeys.",
+    "Building brighter futures, one line of code & lesson at a time.",
 }
 
 export default function RootLayout({
@@ -22,6 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <GoogleTagManager gtmId='GTM-WRRJHVNB'/>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
         <Providers>
           <div className="flex w-full">
