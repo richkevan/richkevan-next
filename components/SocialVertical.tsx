@@ -11,12 +11,12 @@ export default function SocialVertical(props: React.ComponentPropsWithoutRef<'di
     <SocialLink href="https://x.com/intent/follow?screen_name=richkevan" aria-label="Follow on X" icon={XIcon}>
         Follow on X
       </SocialLink>
-      <SocialLink
+      {/* <SocialLink
         href="https://www.instagram.com/rich.kevan/"
         aria-label="Follow on Instagram"
         icon={InstagramIcon} className="mt-4">
         Follow on Instagram
-      </SocialLink>
+      </SocialLink> */}
       <SocialLink
         href="https://github.com/richkevan"
         aria-label="Follow on GitHub"

@@ -53,8 +53,8 @@ export default function Example() {
                   <MailIcon className="h-7 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <a className="hover:" href="mailto:hey@richkevan.com">
-                    hey@richkevan.com
+                  <a className="hover:" href="mailto:contact@richkevan.com">
+                    contact@richkevan.com
                   </a>
                 </dd>
               </div>

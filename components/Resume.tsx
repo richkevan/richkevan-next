@@ -52,25 +52,25 @@ function Role({ role }: { role: Role }) {
     </li>
   )
 }
-
+// {
+//   label: 'Present',
+//   dateTime: new Date().getFullYear().toString(),
+// },
 export function Resume() {
   let resume: Array<Role> = [
     {
       company: 'Code Platoon',
-      title: 'Teaching Assitant',
+      title: 'Technical Lead',
       logo: logoCodePlatoon,
       start: '2024',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      end: '2024'
     },
     {
       company: 'Instant Teams',
       title: 'Full Stack Engineer',
       logo: logoInstantTeams,
-      start: '2024',
-      end: '2022',
+      start: '2022',
+      end: '2024',
     },
     {
       company: 'Bayside',
