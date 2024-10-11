@@ -31,20 +31,17 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Rich Kevan. I live in the SF Bay Area, where I engineer the now and mentor the future.
+            Hi I'm Rich Kevan, a software engineer in California.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I've been a tinkerer and tech enthusiast since childhood. My earliest memory? Attempting to build an NES cartridge out of paper and cardboard at seven. Thankfully, by middle school, I'd graduated to writing programs in BASIC on our trusty Apple IIC.
+            I bring 6 years of experience in JavaScript/TypeScript, Node.js, Python, and both SQL and NoSQL databases, with a proven track record of delivering scalable, efficient solutions. My expertise spans across numerous projects, where I’ve utilized frameworks like React, Next.js, Django, and C#/.NET to build robust, dynamic applications. Throughout my career, I’ve assumed both architect and lead roles, where I contributed to the design and development of complex systems, ensuring the alignment of technical strategy with business goals while fostering collaboration across cross-functional teams.
             </p>
             <p>
-              My childhood was defined by two loves: exploring the boundaries of my creativity through adventure and delving into the world of technology through computers and video games. This insatiable curiosity sparked a lifelong passion for learning and discovery that continues to guide me today.
+            In my spare time, I volunteer as a mentor and teacher, helping veterans and military spouses transition into the tech industry. I find it rewarding to guide them through the learning process and support their career development. Additionally, I enjoy the challenge of solving problems on LeetCode, where I focus on optimizing performance and refining my problem-solving skills.
             </p>
             <p>
-              My journey into web development began in the early 2000s, experimenting with HTML, CSS, and basic PHP to customize MySpace and WordPress. Over the next decade, I honed my skills through self-directed learning, fueled by the rise of platforms like GoDaddy.
-            </p>
-            <p>
-              Currently, my work spans the full spectrum of web, desktop, and mobile development, building robust solutions from front- to back-end.  In addition, I'm passionate about fostering the next generation of tech talent through mentorship and coaching, ensuring I continue to learn and grow alongside my students.
+            In my next role, I’m focused on making a substantial impact by working on projects that define and shape the future of the industry. I’m drawn to opportunities where challenges fuel creativity, and innovation is embraced as a key driver of growth. I want to be part of a company that encourages taking ownership and empowers its team members to advocate for transformative ideas, all while fostering a culture of continuous improvement and learning.
             </p>
           </div>
         </div>
@@ -54,7 +51,7 @@ export default function About() {
           icon={MailIcon}
           className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
           >
-            hey@richkevan.com
+            contact@richkevan.com
           </SocialLink>
         </SocialVertical>
         

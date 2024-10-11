@@ -57,7 +57,7 @@ export function Resume() {
   let resume: Array<Role> = [
     {
       company: 'Code Platoon',
-      title: 'Teaching Assitant',
+      title: 'Technical Lead',
       logo: logoCodePlatoon,
       start: '2024',
       end: {

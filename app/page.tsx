@@ -71,7 +71,7 @@ function Newsletter() {
 
 
 function Photos() {
-  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', '-rotate-2', 'rotate-2']
 
   return (
     <div className="mt-16 sm:mt-20">
@@ -100,7 +100,7 @@ function Photos() {
 
 export const metadata: Metadata = {
   title: 'Rich Kevan',
-  description: 'Software Engineer | Developer Educator | Building brighter futures, one line of code & lesson at a time.',
+  description: 'Full Stack Engineer | Building impact through IAM development.',
 }
 
 export default async function Home() {
@@ -110,17 +110,17 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Software Engineer
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          Rich Kevan
           </h1>
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Developer Educator
+          Full Stack Engineer
           </h1>
           <h3 className="text-xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
-          Building brighter futures, one line of code & lesson at a time.
+          Experienced Tech Lead and Architect: Driving Scalable, High-Impact Solutions with JavaScript, Python, and Full-Stack Expertise
           </h3>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I'm Rich, a software engineer passionate about building innovative solutions and a dedicated coding educator committed to empowering the next generation of developers. Based in the San Francisco Bay Area, I thrive on the intersection of these two worlds, leveraging my technical expertise to solve real-world problems and sharing my knowledge to guide aspiring programmers on their coding journeys.
+          I have a strong foundation in JavaScript/TypeScript, Node.js, Python, and both SQL and NoSQL databases, with extensive experience developing scalable solutions. My work spans projects utilizing React, Next.js, Django, and C#/.NET, where I’ve delivered robust applications and systems. In roles as both an architect and a lead, I’ve guided the design and development of complex, high-impact projects, aligning technical strategy with business goals while driving collaboration within teams.
           </p>
           <SocialHorizontal />
         </div>
