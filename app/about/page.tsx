@@ -11,7 +11,7 @@ import SocialVertical from '@/components/SocialVertical'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Rich Kevan. I live in the SF Bay Area, where I design the future.',
+    'Hi I\'m Rich Kevan, a software engineer in California.',
 }
 
 export default function About() {
@@ -35,7 +35,7 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-            I bring 6 years of experience in JavaScript/TypeScript, Node.js, Python, and both SQL and NoSQL databases, with a proven track record of delivering scalable, efficient solutions. My expertise spans across numerous projects, where I’ve utilized frameworks like React, Next.js, Django, and C#/.NET to build robust, dynamic applications. Throughout my career, I’ve assumed both architect and lead roles, where I contributed to the design and development of complex systems, ensuring the alignment of technical strategy with business goals while fostering collaboration across cross-functional teams.
+            I bring 6 years of experience in JavaScript/TypeScript, Node.js, Python, and both SQL and NoSQL databases, with a proven track record of delivering scalable, efficient solutions. My expertise spans across numerous projects, where I’ve utilized technologies like React, Next.js, Django, and C#/.NET to build robust, dynamic applications. Throughout my career, I’ve assumed both architect and lead roles, where I contributed to the design and development of complex systems, ensuring the alignment of technical strategy with business goals while fostering collaboration across cross-functional teams.
             </p>
             <p>
             In my spare time, I volunteer as a mentor and teacher, helping veterans and military spouses transition into the tech industry. I find it rewarding to guide them through the learning process and support their career development. Additionally, I enjoy the challenge of solving problems on LeetCode, where I focus on optimizing performance and refining my problem-solving skills.
@@ -47,7 +47,7 @@ export default function About() {
         </div>
         <SocialVertical className="lg:pl-20">
           <SocialLink
-          href="mailto:hey@richkevan.com"
+          href="mailto:contact@richkevan.com"
           icon={MailIcon}
           className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
           >
